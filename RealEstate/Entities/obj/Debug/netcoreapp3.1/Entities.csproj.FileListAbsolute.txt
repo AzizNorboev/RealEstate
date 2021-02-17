@@ -1,0 +1,12 @@
+C:\Users\Admin\Documents\GitHub\RealEstate\Entities\bin\Debug\netcoreapp3.1\Entities.deps.json
+C:\Users\Admin\Documents\GitHub\RealEstate\Entities\bin\Debug\netcoreapp3.1\Entities.dll
+C:\Users\Admin\Documents\GitHub\RealEstate\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\GitHub\RealEstate\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
+C:\Users\Admin\Documents\GitHub\RealEstate\Entities\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\Admin\Documents\GitHub\RealEstate\Entities\obj\Debug\netcoreapp3.1\Entities.dll
+C:\Users\Admin\Documents\GitHub\RealEstate\Entities\obj\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\Admin\Documents\GitHub\RealEstate\Entities\obj\Debug\netcoreapp3.1\Entities.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\RealEstate\Entities\bin\Debug\netcoreapp3.1\Entities.runtimeconfig.json
+C:\Users\Admin\Documents\GitHub\RealEstate\Entities\bin\Debug\netcoreapp3.1\Entities.runtimeconfig.dev.json
+C:\Users\Admin\Documents\GitHub\RealEstate\Entities\obj\Debug\netcoreapp3.1\Entities.genruntimeconfig.cache
+C:\Users\Admin\Documents\GitHub\RealEstate\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CoreCompileInputs.cache
