@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate.csproj": {}
+    "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate\\RealEstate.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\Entities\\Entities.csproj": {
+    "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,14 +82,14 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate.csproj": {
+    "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate\\RealEstate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate\\RealEstate.csproj",
         "projectName": "RealEstate",
-        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate.csproj",
+        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate\\RealEstate.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -105,8 +105,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\Repository\\Repository.csproj"
+              "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\Repository\\Repository.csproj"
               }
             }
           }
@@ -153,14 +153,14 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\Repository\\Repository.csproj": {
+    "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\Repository\\Repository.csproj",
+        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\Repository\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -176,8 +176,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\Entities\\Entities.csproj"
+              "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\Entities\\Entities.csproj"
               }
             }
           }

@@ -5729,11 +5729,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\Entities\\Entities.csproj",
+      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\Entities\\Entities.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\Entities\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

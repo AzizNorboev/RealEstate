@@ -1,4 +1,5 @@
-﻿using Entities.Models;
+﻿using Entities.Configuration;
+using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,8 +12,17 @@ namespace Entities
         public RepoContext(DbContextOptions<RepoContext> options)
             :base(options)
         {
-
+            //Database.EnsureCreated();
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new RegionConfiguration());
+            modelBuilder.ApplyConfiguration(new ApartmentConfiguration());
+            modelBuilder.ApplyConfiguration(new HouseConfiguration());
+            
+        }
+
         public virtual DbSet<Apartment> Apartments { get; set; }
         public virtual DbSet<House> Houses { get; set; }
         public virtual DbSet<Region> Regions { get; set; }

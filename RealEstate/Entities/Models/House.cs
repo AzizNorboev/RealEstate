@@ -8,6 +8,7 @@ namespace Entities.Models
 {
     public class House
     {
+        [Range(1, int.MaxValue)]
         public int Id { get; set; }
 
         [Required (ErrorMessage = "Price is required")]
@@ -23,12 +24,20 @@ namespace Entities.Models
 
         public string ImageURL { get; set; }
 
-        [StringLength(50, MinimumLength = 1)]
+        [StringLength(1000, MinimumLength = 1)]
         public string Description { get; set; }
 
-        
+        public HouseStatus Status { get; set; }
+
+
         public int? RegionId { get; set; }
 
         public virtual Region Region { get; set; }
+    }
+
+    public enum HouseStatus
+    {
+        ForSale,
+        ForRent
     }
 }
