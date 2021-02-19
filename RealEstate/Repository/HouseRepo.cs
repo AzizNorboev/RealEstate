@@ -8,41 +8,49 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class HouseRepo : RepositoryBase, IRepositoryBase<House>
+    public class HouseRepo : IHouseRepository          //IRepositoryBase<House>
     {
+
+        private readonly RepoContext _context;
+
         public HouseRepo(RepoContext context)
-            : base(context)
         {
+            _context = context;
         }
 
-        public async Task CreateAsync(House entity)
+        public async Task<IEnumerable<House>> GetHouses()
         {
-            _context.Add(entity);
-            await _context.SaveChangesAsync();
+           return await _context.Houses.ToListAsync();
         }
 
-        public async Task DeleteAsync(int id)
-        {
-            var house = await _context.Houses.FindAsync(id);
-            _context.Houses.Remove(house);
-            await _context.SaveChangesAsync();
-        }
+        //public async Task CreateAsync(House entity)
+        //{
+        //    _context.Add(entity);
+        //    await _context.SaveChangesAsync();
+        //}
 
-        public async Task<List<House>> GetAllAsync()
-        {
-            return await _context.Houses.ToListAsync();
-        }
+        //public async Task DeleteAsync(int id)
+        //{
+        //    var house = await _context.Houses.FindAsync(id);
+        //    _context.Houses.Remove(house);
+        //    await _context.SaveChangesAsync();
+        //}
 
-        public async Task<House> GetByIdAsync(int id)
-        {
-            return await _context.Houses
-                .FirstOrDefaultAsync(m => m.Id == id);
-        }
+        //public async Task<IEnumerable<House>> GetAllAsync()
+        //{
+        //    return await _context.Houses.ToListAsync();
+        //}
 
-        public async Task UpdateAsync(House entity)
-        {
-            _context.Update(entity);
-            await _context.SaveChangesAsync();
-        }
+        //public async Task<House> GetByIdAsync(int id)
+        //{
+        //    return await _context.Houses
+        //        .FirstOrDefaultAsync(m => m.Id == id);
+        //}
+
+        //public async Task UpdateAsync(House entity)
+        //{
+        //    _context.Update(entity);
+        //    await _context.SaveChangesAsync();
+        //}
     }
 }

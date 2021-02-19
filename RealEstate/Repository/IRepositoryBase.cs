@@ -8,7 +8,7 @@ namespace Repository
 {
     public interface IRepositoryBase<T>
     {
-        Task<List<T>> GetAllAsync();
+        Task<IEnumerable<T>> GetAllAsync();
         Task<T> GetByIdAsync(int id);
 
         Task CreateAsync(T entity);

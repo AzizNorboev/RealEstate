@@ -28,7 +28,7 @@ namespace Repository
             await _context.SaveChangesAsync();
         }
 
-        public async Task<List<Apartment>> GetAllAsync()
+        public async Task<IEnumerable<Apartment>> GetAllAsync()
         {
             return await _context.Apartments.ToListAsync();
         }

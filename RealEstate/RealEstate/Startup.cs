@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Repository;
 
 namespace RealEstate
 {
@@ -27,13 +28,25 @@ namespace RealEstate
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+
+            services.AddCors(policy =>
+            {
+                policy.AddPolicy("CorsPolicy", options => options
+                    .AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod());
+            });
+
+            
             services.AddDbContext<RepoContext>(
                 options => options.UseSqlServer(
                     Configuration.GetConnectionString("RealEstate")
                     )
                 );
-           
+
+            services.AddScoped<IHouseRepository, HouseRepo>();
+
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +58,8 @@ namespace RealEstate
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors("CorsPolicy");
 
             app.UseRouting();
 

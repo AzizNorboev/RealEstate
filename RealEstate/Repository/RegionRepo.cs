@@ -28,7 +28,7 @@ namespace Repository
             await _context.SaveChangesAsync();
         }
 
-        public async Task<List<Region>> GetAllAsync()
+        public async Task<IEnumerable<Region>> GetAllAsync()
         {
             return await _context.Regions.ToListAsync();
         }
