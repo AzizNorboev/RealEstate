@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Entities;
+using Entities.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -37,14 +38,15 @@ namespace RealEstate
                     .AllowAnyMethod());
             });
 
-            
+            services.AddScoped<IRepositoryBase<Apartment>, ApartmentRepo>();
+            services.AddScoped<IRepositoryBase<House>, HouseRepo>();
+
+
             services.AddDbContext<RepoContext>(
                 options => options.UseSqlServer(
                     Configuration.GetConnectionString("RealEstate")
                     )
                 );
-
-            services.AddScoped<IHouseRepository, HouseRepo>();
 
             services.AddControllers();
         }

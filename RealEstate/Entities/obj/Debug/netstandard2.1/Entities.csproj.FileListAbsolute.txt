@@ -1,0 +1,8 @@
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Entities\bin\Debug\netstandard2.1\Entities.deps.json
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Entities\bin\Debug\netstandard2.1\Entities.dll
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Entities\bin\Debug\netstandard2.1\Entities.pdb
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Entities\obj\Debug\netstandard2.1\Entities.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Entities\obj\Debug\netstandard2.1\Entities.AssemblyInfo.cs
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Entities\obj\Debug\netstandard2.1\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Entities\obj\Debug\netstandard2.1\Entities.dll
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Entities\obj\Debug\netstandard2.1\Entities.pdb

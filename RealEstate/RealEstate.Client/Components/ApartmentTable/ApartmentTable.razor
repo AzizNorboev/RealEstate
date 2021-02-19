@@ -1,0 +1,63 @@
+﻿@if (Apartments.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">NoRooms</th>
+                <th scope="col">FloorNo</th>
+                <th scope="col">Area(m²)</th>
+                <th scope="col">Description</th>
+                <th scope="col">Status</th>
+                @*<th scope="col">City</th>*@
+                <th scope="col">Price</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var apartment in Apartments)
+            {
+            <tr>
+                <td>
+                    <img src="@apartment.ImageURL" alt="apartment image" style="width:150px;" />
+                </td>
+                <td class="align-middle">
+                    @apartment.NumOfRooms
+                </td>
+                <td class="align-middle">
+                    @apartment.FloorNo
+                </td>
+                <td class="align-middle">
+                    @apartment.Square
+                </td>
+                <td class="align-middle">
+                    @apartment.Description
+                </td>
+                <td class="align-middle">
+                    @apartment.Status
+                </td>
+                @*<td class="align-middle">
+                    $@apartment.Region.Name
+                </td>*@
+                <td class="align-middle">
+                    $@apartment.Price
+                </td>
+               
+                <td class="align-middle">
+                    <button type="button" class="btn btn-info">Update</button>
+                </td>
+                <td class="align-middle">
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <span>
+        Loading Apartments...
+    </span>
+}

@@ -13,17 +13,17 @@ namespace RealEstate.Controllers
     [ApiController]
     public class HousesController : ControllerBase
     {
-        private readonly IHouseRepository _repo;
+        private readonly IRepositoryBase<House> _houseRepo;
 
-        public HousesController(IHouseRepository repo)
+        public HousesController(IRepositoryBase<House> houseRepo)
         {
-            _repo = repo;
+            _houseRepo = houseRepo;
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var houses = await _repo.GetHouses();
+            var houses = await _houseRepo.GetAllAsync();
             return Ok(houses); //TODO: Will use a simpler way of displaying data from codemaze. Generics didnt work
         }
     }
