@@ -21,6 +21,8 @@ namespace RealEstate.Client
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
             builder.Services.AddScoped<IPropertyHttpRepository<Apartment>, ApartmentHttpRepository>();
+            builder.Services.AddScoped<IPropertyHttpRepository<House>, HouseHttpRepository>();
+            builder.Services.AddScoped<IPropertyHttpRepository<Region>, RegionHttpRepository>();
 
             await builder.Build().RunAsync();
         }

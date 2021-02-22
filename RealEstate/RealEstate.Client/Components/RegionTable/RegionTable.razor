@@ -1,0 +1,50 @@
+﻿@if (Regions.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                
+                <th scope="col">Region Id</th>
+                <th scope="col">City</th>
+                <th scope="col">Apartments</th>
+                <th scope="col">Houses</th>             
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var region in Regions)
+            {
+            <tr>
+
+                <td class="align-middle">
+                    @region.Id
+                </td>
+                <td class="align-middle">
+                    @region.Name
+                </td>
+
+                <td class="align-middle">
+                    @region.Apartments
+                </td>
+                <td class="align-middle">
+                    @region.Houses
+                </td>
+
+                <td class="align-middle">
+                    <button type="button" class="btn btn-info">Update</button>
+                </td>
+                <td class="align-middle">
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <span>
+        Loading Regions...
+    </span>
+}

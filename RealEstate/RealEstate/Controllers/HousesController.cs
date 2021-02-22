@@ -20,11 +20,11 @@ namespace RealEstate.Controllers
             _houseRepo = houseRepo;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Get()
-        {
-            var houses = await _houseRepo.GetAllAsync();
-            return Ok(houses); //TODO: Will use a simpler way of displaying data from codemaze. Generics didnt work
-        }
+        //[HttpGet]
+        //public async Task<IActionResult> Get()
+        //{
+        //    var houses = await _houseRepo.GetAllAsync();
+        //    return Ok(houses); //TODO: Will use a simpler way of displaying data from codemaze. Generics didnt work
+        //}
     }
 }

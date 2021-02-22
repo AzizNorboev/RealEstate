@@ -18,7 +18,7 @@ C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Repository\bin\Debug\netco
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Repository\obj\Debug\netcoreapp3.1\Repository.csprojAssemblyReference.cache
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Repository\obj\Debug\netcoreapp3.1\Repository.AssemblyInfoInputs.cache
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Repository\obj\Debug\netcoreapp3.1\Repository.AssemblyInfo.cs
-C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CopyComplete
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Repository\obj\Debug\netcoreapp3.1\Repository.dll
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Repository\obj\Debug\netcoreapp3.1\Repository.pdb
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CoreCompileInputs.cache

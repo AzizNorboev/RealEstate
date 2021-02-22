@@ -35,11 +35,13 @@ namespace RealEstate
                 policy.AddPolicy("CorsPolicy", options => options
                     .AllowAnyOrigin()
                     .AllowAnyHeader()
-                    .AllowAnyMethod());
+                    .AllowAnyMethod()
+                    .WithExposedHeaders("X-Pagination"));
             });
 
             services.AddScoped<IRepositoryBase<Apartment>, ApartmentRepo>();
             services.AddScoped<IRepositoryBase<House>, HouseRepo>();
+            services.AddScoped<IRepositoryBase<Region>, RegionRepo>();
 
 
             services.AddDbContext<RepoContext>(

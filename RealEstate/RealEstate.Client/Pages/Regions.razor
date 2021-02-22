@@ -1,0 +1,21 @@
+﻿@page "/regions"
+@using RealEstate.Client.Components.RegionTable
+
+<div class="row">
+    <div class="col-md-10">
+        @*Place for search and sort*@
+    </div>
+    <div class="col-md-2">
+        <a href="/createApartment">Create Apartment</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <RegionTable Regions="RegionList" />
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        @*Place for pagination*@
+    </div>
+</div>

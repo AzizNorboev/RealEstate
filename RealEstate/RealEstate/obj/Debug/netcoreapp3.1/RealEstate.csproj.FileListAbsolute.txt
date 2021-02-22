@@ -119,8 +119,6 @@ C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\bin\Debug\netco
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.csprojAssemblyReference.cache
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.AssemblyInfoInputs.cache
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.AssemblyInfo.cs
-C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.RazorTargetAssemblyInfo.cache
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.csproj.CopyComplete
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\staticwebassets\RealEstate.StaticWebAssets.Manifest.cache
@@ -128,3 +126,5 @@ C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netco
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.dll
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.pdb
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.genruntimeconfig.cache
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.MvcApplicationPartsAssemblyInfo.cache

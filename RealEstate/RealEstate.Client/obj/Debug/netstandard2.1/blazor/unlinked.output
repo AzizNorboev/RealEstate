@@ -28,6 +28,9 @@ obj\Debug\netstandard2.1\blazor\unlinked\System.Data.dll
 obj\Debug\netstandard2.1\blazor\unlinked\System.Threading.Tasks.Extensions.dll
 obj\Debug\netstandard2.1\blazor\unlinked\System.Numerics.Vectors.dll
 obj\Debug\netstandard2.1\blazor\unlinked\System.Text.Encodings.Web.dll
+obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.AspNetCore.WebUtilities.dll
+obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Primitives.dll
+obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Net.Http.Headers.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.AspNetCore.Components.Web.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.AspNetCore.Components.Forms.dll
@@ -54,7 +57,6 @@ obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.EntityFrameworkCore.Abstracti
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Data.SqlClient.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.EntityFrameworkCore.Relational.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Caching.Abstractions.dll
-obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Primitives.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Configuration.Abstractions.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.EntityFrameworkCore.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Options.dll

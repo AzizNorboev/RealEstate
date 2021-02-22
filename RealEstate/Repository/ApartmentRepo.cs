@@ -1,6 +1,8 @@
 ﻿using Entities;
+using Entities.Features;
 using Entities.Models;
 using Microsoft.EntityFrameworkCore;
+using Repository.Pagination;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -28,9 +30,17 @@ namespace Repository
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Apartment>> GetAllAsync()
+        //public async Task<IEnumerable<Apartment>> GetAllAsync()
+        //{
+        //    return await _context.Apartments.ToListAsync();
+        //}
+
+        public async Task<PagedList<Apartment>> GetAllAsync(EntityParameters entityParameters)
         {
-            return await _context.Apartments.ToListAsync();
+            var apartments = await _context.Apartments.ToListAsync();
+
+            return PagedList<Apartment>
+                .ToPagedList(apartments, entityParameters.PageNumber, entityParameters.PageSize);
         }
 
         public async Task<Apartment> GetByIdAsync(int id)
