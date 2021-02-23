@@ -34,10 +34,11 @@ namespace RealEstate.Client.HttpRepository
         {
             var queryStringParam = new Dictionary<string, string>
             {
-                ["pageNumber"] = entityParameters.PageNumber.ToString()
+                ["pageNumber"] = entityParameters.PageNumber.ToString(),
+                ["searchTerm"] = entityParameters.SearchTerm == null ? "" : entityParameters.SearchTerm
             };
 
-            var response = await _client.GetAsync(QueryHelpers.AddQueryString("https://localhost:5011/api/apartments", queryStringParam));
+            var response = await _client.GetAsync(QueryHelpers.AddQueryString("https://localhost:5011/api/houses", queryStringParam));
             var content = await response.Content.ReadAsStringAsync();
             if (!response.IsSuccessStatusCode)
             {

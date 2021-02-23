@@ -30,9 +30,9 @@ namespace RealEstate.Controllers
         //}
         public async Task<IActionResult> Get([FromQuery] EntityParameters entityParameters)
         {
-            var products = await _apartmentRepo.GetAllAsync(entityParameters);
-            Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(products.MetaData));
-            return Ok(products);
+            var apartments = await _apartmentRepo.GetAllAsync(entityParameters);
+            Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(apartments.MetaData));
+            return Ok(apartments);
         }
     }
 }

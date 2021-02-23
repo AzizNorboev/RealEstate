@@ -2,6 +2,7 @@
 using Entities.Features;
 using Entities.Models;
 using Microsoft.EntityFrameworkCore;
+using Repository.Extentions;
 using Repository.Pagination;
 using System;
 using System.Collections.Generic;
@@ -37,7 +38,12 @@ namespace Repository
 
         public async Task<PagedList<Apartment>> GetAllAsync(EntityParameters entityParameters)
         {
-            var apartments = await _context.Apartments.ToListAsync();
+
+            var apartments = await _context.Apartments
+       .Search(entityParameters.SearchTerm)
+       .ToListAsync();
+
+            //var apartments = await _context.Apartments.ToListAsync();
 
             return PagedList<Apartment>
                 .ToPagedList(apartments, entityParameters.PageNumber, entityParameters.PageSize);

@@ -1,9 +1,13 @@
 ﻿@page "/apartments"
 @using RealEstate.Client.Components.ApartmentTable
+@using RealEstate.Client.Components
 
 <div class="row">
+    <div class="col-md-5">
+        <Search OnSearchChanged="SearchChanged" />
+    </div>
     <div class="col-md-10">
-        @*Place for search and sort*@
+        @* sort*@
     </div>
     <div class="col-md-2">
         <a href="/createApartment">Create Apartment</a>
@@ -16,6 +20,6 @@
 </div>
 <div class="row">
     <div class="col">
-        @*Place for pagination*@
+        <Page MetaData="MetaData" Spread="2" SelectedPage="SelectedPage" />
     </div>
 </div>

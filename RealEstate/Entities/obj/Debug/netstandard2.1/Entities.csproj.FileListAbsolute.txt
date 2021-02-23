@@ -5,5 +5,5 @@ C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Entities\obj\Debug\netstan
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Entities\obj\Debug\netstandard2.1\Entities.AssemblyInfo.cs
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Entities\obj\Debug\netstandard2.1\Entities.dll
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Entities\obj\Debug\netstandard2.1\Entities.pdb
-C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Entities\obj\Debug\netstandard2.1\Entities.csprojAssemblyReference.cache
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Entities\obj\Debug\netstandard2.1\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\Entities\obj\Debug\netstandard2.1\Entities.csprojAssemblyReference.cache

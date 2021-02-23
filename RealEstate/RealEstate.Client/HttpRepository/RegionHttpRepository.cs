@@ -36,7 +36,7 @@ namespace RealEstate.Client.HttpRepository
                 ["pageNumber"] = entityParameters.PageNumber.ToString()
             };
 
-            var response = await _client.GetAsync(QueryHelpers.AddQueryString("https://localhost:5011/api/apartments", queryStringParam));
+            var response = await _client.GetAsync(QueryHelpers.AddQueryString("https://localhost:5011/api/regions", queryStringParam));
             var content = await response.Content.ReadAsStringAsync();
             if (!response.IsSuccessStatusCode)
             {

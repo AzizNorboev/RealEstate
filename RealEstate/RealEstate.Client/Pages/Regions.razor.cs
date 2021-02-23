@@ -13,14 +13,25 @@ namespace RealEstate.Client.Pages
     {
         public List<Region> RegionList { get; set; } = new List<Region>();
         public MetaData MetaData { get; set; } = new MetaData();
-        private EntityParameters _productParameters = new EntityParameters();
+        private EntityParameters _regionParameters = new EntityParameters();
 
         [Inject]
         public IPropertyHttpRepository<Region> RegionRepo { get; set; }
 
         protected async override Task OnInitializedAsync()
         {
-            var pagingResponse = await RegionRepo.GetProperty(_productParameters);
+            await GetProperty();
+           
+        }
+
+        private async Task SelectedPage(int page)
+        {
+            _regionParameters.PageNumber = page;
+            await GetProperty();
+        }
+        private async Task GetProperty()
+        {
+            var pagingResponse = await RegionRepo.GetProperty(_regionParameters);
             RegionList = pagingResponse.Items;
             MetaData = pagingResponse.MetaData;
         }

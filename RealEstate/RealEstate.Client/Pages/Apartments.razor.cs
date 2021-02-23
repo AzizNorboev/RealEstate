@@ -13,16 +13,34 @@ namespace RealEstate.Client.Pages
     {
         public List<Apartment> ApartmentList { get; set; } = new List<Apartment>();
         public MetaData MetaData { get; set; } = new MetaData();
-        private EntityParameters _productParameters = new EntityParameters();
+        private EntityParameters _apartmentParameters = new EntityParameters();
 
         [Inject]
         public IPropertyHttpRepository<Apartment> ApartmentRepo { get; set; }
 
         protected async override Task OnInitializedAsync()
         {
-            var pagingResponse = await ApartmentRepo.GetProperty(_productParameters);
+            await GetProperty();
+        }
+
+        private async Task SelectedPage(int page)
+        {
+            _apartmentParameters.PageNumber = page;
+            await GetProperty();
+        }
+        private async Task GetProperty()
+        {
+            var pagingResponse = await ApartmentRepo.GetProperty(_apartmentParameters);
             ApartmentList = pagingResponse.Items;
             MetaData = pagingResponse.MetaData;
+        }
+
+        private async Task SearchChanged(string searchTerm)
+        {
+            Console.WriteLine(searchTerm);
+            _apartmentParameters.PageNumber = 1;
+            _apartmentParameters.SearchTerm = searchTerm;
+            await GetProperty();
         }
     }
 }

@@ -13,16 +13,35 @@ namespace RealEstate.Client.Pages
     {
         public List<House> HouseList { get; set; } = new List<House>();
         public MetaData MetaData { get; set; } = new MetaData();
-        private EntityParameters _productParameters = new EntityParameters();
+        private EntityParameters _houseParameters = new EntityParameters();
 
         [Inject]
         public IPropertyHttpRepository<House> HouseRepo { get; set; }
 
         protected async override Task OnInitializedAsync()
         {
-            var pagingResponse = await HouseRepo.GetProperty(_productParameters);
+            await GetProperty();
+           
+        }
+
+        private async Task SelectedPage(int page)
+        {
+            _houseParameters.PageNumber = page;
+            await GetProperty();
+        }
+        private async Task GetProperty()
+        {
+            var pagingResponse = await HouseRepo.GetProperty(_houseParameters);
             HouseList = pagingResponse.Items;
             MetaData = pagingResponse.MetaData;
+        }
+
+        private async Task SearchChanged(string searchTerm)
+        {
+            Console.WriteLine(searchTerm);
+            _houseParameters.PageNumber = 1;
+            _houseParameters.SearchTerm = searchTerm;
+            await GetProperty();
         }
     }
 }
