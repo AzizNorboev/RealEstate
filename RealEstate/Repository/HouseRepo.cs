@@ -43,6 +43,7 @@ namespace Repository
         {
             var houses = await _context.Houses
              .Search(entityParameters.SearchTerm)
+             .Sort(entityParameters.OrderBy)
              .ToListAsync();
 
             return PagedList<House>

@@ -126,5 +126,6 @@ C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netco
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.dll
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.pdb
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.genruntimeconfig.cache
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\bin\Debug\netcoreapp3.1\System.Linq.Dynamic.Core.dll
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.MvcApplicationPartsAssemblyInfo.cache

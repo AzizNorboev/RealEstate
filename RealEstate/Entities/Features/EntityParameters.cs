@@ -22,5 +22,6 @@ namespace Entities.Features
         }
 
         public string SearchTerm { get; set; }
+        public string OrderBy { get; set; } = "status";
     }
 }

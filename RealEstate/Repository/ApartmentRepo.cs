@@ -40,8 +40,9 @@ namespace Repository
         {
 
             var apartments = await _context.Apartments
-       .Search(entityParameters.SearchTerm)
-       .ToListAsync();
+              .Search(entityParameters.SearchTerm)
+              .Sort(entityParameters.OrderBy)
+              .ToListAsync();
 
             //var apartments = await _context.Apartments.ToListAsync();
 

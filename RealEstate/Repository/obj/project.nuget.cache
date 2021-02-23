@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8Kzza91VqDFFUVp+goeRkMqX/hWr3Y6om6FmKDF2eeJATLH3KCbf7Gxi/aUrq7N72dDHWXGJn0kFD11tEq4yvA==",
+  "dgSpecHash": "tJlBVE0mUR5vzWrAJp+9UKuqt8pWlU3vUMU5XDqTWeeo0jaKr8PkD/lNysDYQiQSubbqZQ8erU5TFZmROaA0fg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
@@ -64,6 +64,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.linq.dynamic.core\\1.1.0\\system.linq.dynamic.core.1.1.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",

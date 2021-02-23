@@ -43,5 +43,12 @@ namespace RealEstate.Client.Pages
             _houseParameters.SearchTerm = searchTerm;
             await GetProperty();
         }
+
+        private async Task SortChanged(string orderBy)
+        {
+            Console.WriteLine(orderBy);
+            _houseParameters.OrderBy = orderBy;
+            await GetProperty();
+        }
     }
 }
