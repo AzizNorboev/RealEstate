@@ -24,9 +24,9 @@ namespace Repository
         //   return await _context.Houses.ToListAsync();
         //}
 
-        public async Task CreateAsync(House entity)
+        public async Task CreateAsync(House house)
         {
-            _context.Add(entity);
+            _context.Add(house);
             await _context.SaveChangesAsync();
         }
 

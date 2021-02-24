@@ -11,5 +11,6 @@ namespace RealEstate.Client.HttpRepository
     {
         //Task<List<T>> GetProperty();
         Task<PagingResponse<T>> GetProperty(EntityParameters entityParameters);
+        Task CreateAsync(T entity);
     }
 }

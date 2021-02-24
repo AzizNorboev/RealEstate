@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
@@ -21,21 +22,24 @@ namespace RealEstate.Client.HttpRepository
             _client = client;
         }
 
-
-        //public async Task<List<House>> GetProperty()
-        //{
-        //    var response = await _client.GetAsync("https://localhost:5011/api/houses");
-        //    var content = await response.Content.ReadAsStringAsync();
-        //    var houses = JsonSerializer.Deserialize<List<House>>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-        //    return houses;
-        //}
+        public async Task CreateAsync(House house)
+        {
+            var content = JsonSerializer.Serialize(house);
+            var bodyContent = new StringContent(content, Encoding.UTF8, "application/json");
+            var postResult = await _client.PostAsync("https://localhost:5011/api/houses", bodyContent);
+            var postContent = await postResult.Content.ReadAsStringAsync();
+            if (!postResult.IsSuccessStatusCode)
+            {
+                throw new ApplicationException(postContent);
+            }
+        }
 
         public async Task<PagingResponse<House>> GetProperty(EntityParameters entityParameters)
         {
             var queryStringParam = new Dictionary<string, string>
             {
                 ["pageNumber"] = entityParameters.PageNumber.ToString(),
-                ["searchTerm"] = entityParameters.SearchTerm == null ? "" : entityParameters.SearchTerm,
+                ["searchTerm"] = entityParameters.SearchTerm ?? "",
                 ["orderBy"] = entityParameters.OrderBy
             };
 

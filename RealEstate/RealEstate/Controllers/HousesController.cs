@@ -35,5 +35,20 @@ namespace RealEstate.Controllers
             Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(houses.MetaData));
             return Ok(houses);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateAsync([FromBody] House house)
+        {
+            if (house == null)
+                return BadRequest();
+
+            //if (!ModelState.IsValid)
+            //{
+
+            //}
+            await _houseRepo.CreateAsync(house);
+
+            return Created("", house);
+        }
     }
 }

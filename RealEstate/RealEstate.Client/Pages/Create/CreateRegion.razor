@@ -1,0 +1,25 @@
+﻿@page "/createRegion"
+
+<h2>Create House Form</h2>
+
+<EditForm Model="_region" OnSubmit="Create" class="card card-body bg-light mt-5">
+
+
+
+    <div class="form-group row">
+        <label for="description" class="col-md-2 col-form-label">Name:</label>
+        <div class="col-md-10">
+            <InputText id="description" class="form-control" @bind-Value="_region.Name" />
+        </div>
+    </div>
+
+
+  
+
+
+    <div class="row">
+        <div class="col-md-12 text-right">
+            <button type="submit" class="btn btn-success">Create</button>
+        </div>
+    </div>
+</EditForm>

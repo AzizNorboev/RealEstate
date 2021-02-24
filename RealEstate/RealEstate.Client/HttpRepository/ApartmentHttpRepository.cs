@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Text;
 
 namespace RealEstate.Client.HttpRepository
 {
@@ -21,7 +22,19 @@ namespace RealEstate.Client.HttpRepository
             _client = client;
         }
 
-    
+        public async Task CreateAsync(Apartment apartment)
+        {
+            var content = JsonSerializer.Serialize(apartment);
+            var bodyContent = new StringContent(content, Encoding.UTF8, "application/json");
+            var postResult = await _client.PostAsync("https://localhost:5011/api/apartments", bodyContent);
+            var postContent = await postResult.Content.ReadAsStringAsync();
+            if (!postResult.IsSuccessStatusCode)
+            {
+                throw new ApplicationException(postContent);
+            }
+        }
+
+
 
         //public async Task<List<Apartment>> GetProperty()
         //{
@@ -36,7 +49,7 @@ namespace RealEstate.Client.HttpRepository
             var queryStringParam = new Dictionary<string, string>
             {
                 ["pageNumber"] = entityParameters.PageNumber.ToString(),
-                ["searchTerm"] = entityParameters.SearchTerm == null ? "" : entityParameters.SearchTerm,
+                ["searchTerm"] = entityParameters.SearchTerm ?? "",
                 ["orderBy"] = entityParameters.OrderBy
             };
 
@@ -55,5 +68,6 @@ namespace RealEstate.Client.HttpRepository
 
             return pagingResponse;
         }
+
     }
 }

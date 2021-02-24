@@ -13,14 +13,16 @@ namespace Repository
 {
     public class ApartmentRepo : RepositoryBase, IRepositoryBase<Apartment>
     {
+        
+
         public ApartmentRepo(RepoContext context)
             : base(context)
         {
         }
 
-        public async Task CreateAsync(Apartment entity)
+        public async Task CreateAsync(Apartment apartment)
         {
-            _context.Add(entity);
+            _context.Add(apartment);
             await _context.SaveChangesAsync();
         }
 
@@ -56,9 +58,9 @@ namespace Repository
                 .FirstOrDefaultAsync(m => m.Id == id);
         }
 
-        public async Task UpdateAsync(Apartment entity)
+        public async Task UpdateAsync(Apartment apartment)
         {
-             _context.Update(entity);
+             _context.Update(apartment);
             await _context.SaveChangesAsync();
         }
     }

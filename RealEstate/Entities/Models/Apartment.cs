@@ -8,7 +8,7 @@ namespace Entities.Models
 {
     public class Apartment
     {
-        [Range(1, int.MaxValue)]
+        
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Price is required")]

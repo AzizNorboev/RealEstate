@@ -1,0 +1,78 @@
+﻿@page "/createHouse"
+
+<h2>Create House Form</h2>
+
+<EditForm Model="_house" OnSubmit="Create" class="card card-body bg-light mt-5">
+
+
+
+    <div class="form-group row">
+        <label for="description" class="col-md-2 col-form-label">Description:</label>
+        <div class="col-md-10">
+            <InputText id="description" class="form-control" @bind-Value="_house.Description" />
+        </div>
+    </div>
+
+
+    <div class="form-group row">
+        <label for="imageurl" class="col-md-2 col-form-label">Image:</label>
+        <div class="col-md-10">
+            <InputText id="imageurl" class="form-control" @bind-Value="_house.ImageURL" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="numofrooms" class="col-md-2 col-form-label">Number Of Rooms:</label>
+        <div class="col-md-10">
+            <InputNumber id="numofrooms" class="form-control" @bind-Value="_house.NumOfRooms" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="price" class="col-md-2 col-form-label">Price:</label>
+        <div class="col-md-10">
+            <InputNumber id="price" class="form-control" @bind-Value="_house.Price" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="regionid" class="col-md-2 col-form-label">RegionId:</label>
+        <div class="col-md-10">
+            <InputNumber id="regionid" class="form-control" @bind-Value="_house.RegionId" />
+        </div>
+    </div>
+
+
+
+    <div class="form-group row">
+        <label for="square" class="col-md-2 col-form-label">Square(m²):</label>
+        <div class="col-md-10">
+            <InputNumber id="square" class="form-control" @bind-Value="_house.Square" />
+        </div>
+    </div>
+
+
+
+    <div class="form-group row">
+        <label for="Status" class="col-md-2 col-form-label">Status:</label>
+        <div class="col-md-10">
+            <InputSelect @bind-Value="_house.Status" class="form-control">
+                @foreach (var status in Enum.GetValues(typeof(HouseStatus)))
+                {
+                    <option value="@status">@status</option>
+                }
+            </InputSelect>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="row">
+        <div class="col-md-12 text-right">
+            <button type="submit" class="btn btn-success">Create</button>
+        </div>
+    </div>
+</EditForm>
