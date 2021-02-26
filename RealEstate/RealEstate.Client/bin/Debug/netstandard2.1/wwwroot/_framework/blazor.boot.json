@@ -6,7 +6,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "RealEstate.Client.dll": "sha256-WBXg3RnoPN8gJwW\/IYs1uQqnwBuq\/9dx\/0sJO3u4k88=",
+      "RealEstate.Client.dll": "sha256-HawKklzEA4Dwi9Mra\/teCy\/C\/bKOvmzbZqLp\/POgSbg=",
       "Microsoft.AspNetCore.WebUtilities.dll": "sha256-D5akJeBd7NNITuzAXxlX7zl2jfsc4uTKyeEKwwNhqoo=",
       "System.Text.Encodings.Web.dll": "sha256-Tqh1Da+iTRQJEZUGAsMNFuZ4hf1PMf13WApRZod+uw4=",
       "netstandard.dll": "sha256-\/zcPVM75OAY+joGVM8yIC1gO1SFYWP1CFERgQ8PJkfA=",
@@ -46,6 +46,7 @@
       "System.ComponentModel.DataAnnotations.dll": "sha256-LIfCYwg+PHltTK4z3EnbSkA7m2cn8JS4jHVthdKrDF8=",
       "Microsoft.AspNetCore.Components.dll": "sha256-PEg9ghiKSWBTX0jq8pFDvv2Yvw92Y8W0ELtWrSE4fhA=",
       "Microsoft.Extensions.Logging.Abstractions.dll": "sha256-n9WwxmW7b3EY\/PvfvITJ8uybiqCRLnQ89GXocsNkvLE=",
+      "Microsoft.JSInterop.dll": "sha256-LqwA2Rpm96Ualk0IhLZar87kfRCyKHzHTeTt2jYhm7M=",
       "Entities.dll": "sha256-8TquvesAjhfeobO3uF\/xC+KKE7uSngO7vG16M+zwhWc=",
       "Microsoft.EntityFrameworkCore.SqlServer.dll": "sha256-isYj1qkH72fiaezUSBGxCqvwbxVJsgAo5gQ0F7a0lzU=",
       "Microsoft.Bcl.HashCode.dll": "sha256-\/oNjA5NLstakytPNbs0Q7U1dxigzlxrHl+pNgdBTcvo=",
@@ -71,6 +72,7 @@
       "Microsoft.Extensions.Caching.Memory.dll": "sha256-63iyvfuCW8DmrflwI9qPLUAabHBnO4xp30hhBTEbIKY=",
       "Microsoft.Extensions.Logging.dll": "sha256-ahWEfeXatWSmoO3nLAWqCjKkDzgwVM\/QjypWwC3+6Lw=",
       "System.Collections.Immutable.dll": "sha256-s1jmIj8JETh0vdd88gHWMNG0z7TmzIpQxsIbEfd5XOI=",
+      "Tewr.Blazor.FileReader.dll": "sha256-+8JsYr0nQtK1U5Ora9CZpNOUQSOY7TzFoOmWTAOtAW4=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-FJ+rEgcx6ljTxwbRXZSUGfrDKpVvOxHCSfNxbnXNn3M=",
       "Microsoft.Extensions.Configuration.dll": "sha256-lE1HMnJhzE\/X8ZhooY0MlIPG7km4gUDk191pZ+dcUc4=",
       "Microsoft.Extensions.Configuration.Json.dll": "sha256-mQqyOIjuVduaLQ7ZyvDrChDLp8rTeQknIIWDzqsO4eY=",
@@ -78,11 +80,10 @@
       "Microsoft.Extensions.FileProviders.Physical.dll": "sha256-tY1dlliVr+yGzBF7d0z\/iaulZfBJNaSrCKDD0RP2cc8=",
       "Microsoft.Extensions.FileSystemGlobbing.dll": "sha256-r8LuqDQgcB\/c3E48xHqsAY1eRZB1ZtuqZF6nlufn7kg=",
       "Microsoft.Extensions.FileProviders.Abstractions.dll": "sha256-DrtNiKIMjfSOdamH5Bs5zHmjFADgNiwrY5tRgTm6XuI=",
-      "Microsoft.JSInterop.dll": "sha256-LqwA2Rpm96Ualk0IhLZar87kfRCyKHzHTeTt2jYhm7M=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-czNf3btAeBW\/vvID5LAfgcsNZ+GM3ssVuPaMflcg0rs="
     },
     "pdb": {
-      "RealEstate.Client.pdb": "sha256-AYTf5q2NdOIaV5CmbVV6kVdVOFYcI\/Y6M9HfHWfJ5fM=",
+      "RealEstate.Client.pdb": "sha256-sQnM4FJKpGlF\/d7sJ9ADsLAVg3UNIn1hgd0I7rSEM90=",
       "Entities.pdb": "sha256-hMgmm15p8C0CuWZYPCMmq4sgK3if2a\/gAyK4BBMQpYg=",
       "Microsoft.Data.SqlClient.pdb": "sha256-ymdPEsfx1uHdDaqrWa2MDKtStIdJa\/Wa33nxT48pI9s="
     },

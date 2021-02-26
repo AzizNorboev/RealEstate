@@ -145,6 +145,10 @@
             "System.Net.Http.Json": {
               "target": "Package",
               "version": "[3.2.0, )"
+            },
+            "Tewr.Blazor.FileReader": {
+              "target": "Package",
+              "version": "[2.0.0.20200, )"
             }
           },
           "imports": [

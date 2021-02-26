@@ -15,7 +15,7 @@ namespace Repository
         Task<T> GetByIdAsync(int id);
 
         Task CreateAsync(T entity);
-        Task UpdateAsync(T entity);
+        Task UpdateAsync(T entity, T dbEntity);
         Task DeleteAsync(int id);
 
     }

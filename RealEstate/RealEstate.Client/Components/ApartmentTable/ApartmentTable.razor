@@ -38,18 +38,20 @@
                     <td class="align-middle">
                         @apartment.Status
                     </td>
+                   
                     @*<td class="align-middle">
-                            $@apartment.Region.Name
-                        </td>*@
+                            @apartment.Region.Name
+                    </td>*@
+                    
                     <td class="align-middle">
                         $@apartment.Price
                     </td>
 
                     <td class="align-middle">
-                        <button type="button" class="btn btn-info">Update</button>
+                        <button type="button" class="btn btn-info" @onclick="() => RedirectToUpdate(apartment.Id)">Update</button>
                     </td>
                     <td class="align-middle">
-                        <button type="button" class="btn btn-danger">Delete</button>
+                        <button type="button" class="btn btn-danger" @onclick="() => Delete(apartment.Id)">Delete</button>
                     </td>
                 </tr>
             }

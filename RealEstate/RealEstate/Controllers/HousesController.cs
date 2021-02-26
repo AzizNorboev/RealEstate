@@ -50,5 +50,35 @@ namespace RealEstate.Controllers
 
             return Created("", house);
         }
+     
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetByIdAsync(int id)
+        {
+            var house = await _houseRepo.GetByIdAsync(id);
+            return Ok(house);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateProduct(int id, [FromBody] House house)
+        {
+            //additional product and model validation checks
+
+            var dbHouse = await _houseRepo.GetByIdAsync(id);
+            if (dbHouse == null)
+                return NotFound();
+
+            await _houseRepo.UpdateAsync(house, dbHouse);
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAsync(int id)
+        {
+            
+            await _houseRepo.DeleteAsync(id);
+
+            return NoContent();
+        }
     }
 }

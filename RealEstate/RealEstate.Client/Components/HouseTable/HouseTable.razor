@@ -34,8 +34,8 @@
                 </td>
 
                 @*<td class="align-middle">
-                    @house.Region.Name not working so far
-                </td>*@
+            @house.Region.Name not working so far
+        </td>*@
                 <td class="align-middle">
                     @house.Status
                 </td>
@@ -45,10 +45,10 @@
                 </td>
 
                 <td class="align-middle">
-                    <button type="button" class="btn btn-info">Update</button>
+                    <button type="button" class="btn btn-info" @onclick="() => RedirectToUpdate(house.Id)">Update</button>
                 </td>
                 <td class="align-middle">
-                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="button" class="btn btn-danger" @onclick="() => Delete(house.Id)">Delete</button>
                 </td>
             </tr>
             }

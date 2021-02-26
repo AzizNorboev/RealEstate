@@ -50,9 +50,9 @@ namespace Repository
                 .FirstOrDefaultAsync(m => m.Id == id);
         }
 
-        public async Task UpdateAsync(Region entity)
+        public async Task UpdateAsync(Region entity, Region dbRegion)
         {
-            _context.Update(entity);
+            dbRegion.Name = entity.Name;
             await _context.SaveChangesAsync();
         }
 

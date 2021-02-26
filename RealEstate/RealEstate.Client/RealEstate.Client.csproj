@@ -12,6 +12,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="3.2.1" PrivateAssets="all" />
     <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
     <PackageReference Include="System.Net.Http.Json" Version="3.2.0" />
+    <PackageReference Include="Tewr.Blazor.FileReader" Version="2.0.0.20200" />
   </ItemGroup>
 
   <ItemGroup>

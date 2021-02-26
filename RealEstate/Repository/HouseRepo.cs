@@ -56,9 +56,19 @@ namespace Repository
                 .FirstOrDefaultAsync(m => m.Id == id);
         }
 
-        public async Task UpdateAsync(House entity)
+        public async Task UpdateAsync(House entity, House dbHouse)
         {
-            _context.Update(entity);
+            dbHouse.Description = entity.Description;
+            
+            dbHouse.ImageURL = entity.ImageURL;
+            dbHouse.NumOfRooms = entity.NumOfRooms;
+            dbHouse.Price = entity.Price;
+            dbHouse.RegionId = entity.RegionId;
+            dbHouse.Square = entity.Square;
+            dbHouse.Status = entity.Status;
+
+
+            await _context.SaveChangesAsync();
             await _context.SaveChangesAsync();
         }
     }

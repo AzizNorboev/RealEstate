@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.WebUtilities;
 using RealEstate.Client.Features;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -34,6 +35,18 @@ namespace RealEstate.Client.HttpRepository
             }
         }
 
+        public async Task DeleteProperty(int id)
+        {
+            var url = Path.Combine("https://localhost:5011/api/houses", id.ToString());
+
+            var deleteResult = await _client.DeleteAsync(url);
+            var deleteContent = await deleteResult.Content.ReadAsStringAsync();
+            if (!deleteResult.IsSuccessStatusCode)
+            {
+                throw new ApplicationException(deleteContent);
+            }
+        }
+
         public async Task<PagingResponse<House>> GetProperty(EntityParameters entityParameters)
         {
             var queryStringParam = new Dictionary<string, string>
@@ -58,5 +71,35 @@ namespace RealEstate.Client.HttpRepository
 
             return pagingResponse;
         }
+
+        public async Task<House> GetPropertyById(string id)
+        {
+            var url = Path.Combine("https://localhost:5011/api/houses/", id);
+
+            var response = await _client.GetAsync(url);
+            var content = await response.Content.ReadAsStringAsync();
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new ApplicationException(content);
+            }
+
+            var house = JsonSerializer.Deserialize<House>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            return house;
+        }
+        public async Task UpdateProperty(House house)
+        {
+            var content = JsonSerializer.Serialize(house);
+            var bodyContent = new StringContent(content, Encoding.UTF8, "application/json");
+            var url = Path.Combine("https://localhost:5011/api/houses/", house.Id.ToString());
+
+            var putResult = await _client.PutAsync(url, bodyContent);
+            var putContent = await putResult.Content.ReadAsStringAsync();
+
+            if (!putResult.IsSuccessStatusCode)
+            {
+                throw new ApplicationException(putContent);
+            }
+        }
+
     }
 }

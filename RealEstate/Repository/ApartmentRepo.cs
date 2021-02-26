@@ -42,6 +42,7 @@ namespace Repository
         {
 
             var apartments = await _context.Apartments
+                //.Include(a => a.Region)
               .Search(entityParameters.SearchTerm)
               .Sort(entityParameters.OrderBy)
               .ToListAsync();
@@ -58,9 +59,19 @@ namespace Repository
                 .FirstOrDefaultAsync(m => m.Id == id);
         }
 
-        public async Task UpdateAsync(Apartment apartment)
+        public async Task UpdateAsync(Apartment apartment, Apartment dbApartment)
         {
-             _context.Update(apartment);
+
+            dbApartment.Description = apartment.Description;
+            dbApartment.FloorNo = apartment.FloorNo;
+            dbApartment.ImageURL = apartment.ImageURL;
+            dbApartment.NumOfRooms = apartment.NumOfRooms;
+            dbApartment.Price = apartment.Price;
+            dbApartment.RegionId = apartment.RegionId;
+            dbApartment.Square = apartment.Square;
+            dbApartment.Status = apartment.Status;
+
+            
             await _context.SaveChangesAsync();
         }
     }

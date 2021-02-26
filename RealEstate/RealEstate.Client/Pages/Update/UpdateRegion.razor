@@ -1,0 +1,29 @@
+﻿@page "/updateRegion/{id}"
+
+<h2>Update Product Form</h2>
+
+@if (_region != null)
+{
+
+    <EditForm Model="_region" OnValidSubmit="Update" class="card card-body bg-light mt-5">
+        <DataAnnotationsValidator />
+       
+
+        <div class="form-group row">
+            <label for="name" class="col-md-2 col-form-label">Name:</label>
+            <div class="col-md-10">
+                <InputText id="name" class="form-control" @bind-Value="_region.Name" />
+            </div>
+        </div>
+
+      
+
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <button type="submit" class="btn btn-success">Update</button>
+            </div>
+        </div>
+
+    </EditForm>
+    <SuccessNotification @ref="_notification" />
+}

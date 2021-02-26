@@ -50,5 +50,12 @@ namespace RealEstate.Client.Pages
             _houseParameters.OrderBy = orderBy;
             await GetProperty();
         }
+
+        private async Task DeleteHouse(int id)
+        {
+            await HouseRepo.DeleteProperty(id);
+            _houseParameters.PageNumber = 1;
+            await GetProperty();
+        }
     }
 }

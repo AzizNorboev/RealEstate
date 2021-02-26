@@ -49,5 +49,36 @@ namespace RealEstate.Controllers
 
             return Created("", region);
         }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetByIdAsync(int id)
+        {
+            var region = await _regionRepo.GetByIdAsync(id);
+            return Ok(region);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateProduct(int id, [FromBody] Region region)
+        {
+            //additional product and model validation checks
+
+            var dbRegion = await _regionRepo.GetByIdAsync(id);
+            if (dbRegion == null)
+                return NotFound();
+
+            await _regionRepo.UpdateAsync(region, dbRegion);
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAsync(int id)
+        {
+           
+
+            await _regionRepo.DeleteAsync(id);
+
+            return NoContent();
+        }
     }
 }

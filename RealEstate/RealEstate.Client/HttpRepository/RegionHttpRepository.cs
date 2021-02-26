@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.WebUtilities;
 using RealEstate.Client.Features;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -34,6 +35,17 @@ namespace RealEstate.Client.HttpRepository
             }
         }
 
+        public async Task DeleteProperty(int id)
+        {
+            var url = Path.Combine("https://localhost:5011/api/regions", id.ToString());
+
+            var deleteResult = await _client.DeleteAsync(url);
+            var deleteContent = await deleteResult.Content.ReadAsStringAsync();
+            if (!deleteResult.IsSuccessStatusCode)
+            {
+                throw new ApplicationException(deleteContent);
+            }
+        }
         //public async Task<List<Region>> GetProperty()
         //{
         //    var response = await _client.GetAsync("https://localhost:5011/api/regions");
@@ -63,6 +75,35 @@ namespace RealEstate.Client.HttpRepository
             };
 
             return pagingResponse;
+        }
+
+        public async Task<Region> GetPropertyById(string id)
+        {
+            var url = Path.Combine("https://localhost:5011/api/regions/", id);
+
+            var response = await _client.GetAsync(url);
+            var content = await response.Content.ReadAsStringAsync();
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new ApplicationException(content);
+            }
+
+            var region = JsonSerializer.Deserialize<Region>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            return region;
+        }
+        public async Task UpdateProperty(Region region)
+        {
+            var content = JsonSerializer.Serialize(region);
+            var bodyContent = new StringContent(content, Encoding.UTF8, "application/json");
+            var url = Path.Combine("https://localhost:5011/api/regions/", region.Id.ToString());
+
+            var putResult = await _client.PutAsync(url, bodyContent);
+            var putContent = await putResult.Content.ReadAsStringAsync();
+
+            if (!putResult.IsSuccessStatusCode)
+            {
+                throw new ApplicationException(putContent);
+            }
         }
     }
 }

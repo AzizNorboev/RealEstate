@@ -2209,6 +2209,25 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Tewr.Blazor.FileReader/2.0.0.20200": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.3",
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Tewr.Blazor.FileReader.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Tewr.Blazor.FileReader.dll": {}
+        },
+        "build": {
+          "buildTransitive/Tewr.Blazor.FileReader.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Tewr.Blazor.FileReader.props": {}
+        }
+      },
       "Entities/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -7951,6 +7970,26 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Tewr.Blazor.FileReader/2.0.0.20200": {
+      "sha512": "0WhsmmWXDhlxD5jDJhDbG1H7PhXkfSFBxNJzgPfhasrXe+KeHqab9e9ZbIWsV7P1J8lcHG1Sy5tnkHnlUOtTxw==",
+      "type": "package",
+      "path": "tewr.blazor.filereader/2.0.0.20200",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "build/Tewr.Blazor.FileReader.props",
+        "buildMultiTargeting/Tewr.Blazor.FileReader.props",
+        "buildTransitive/Tewr.Blazor.FileReader.props",
+        "icon.png",
+        "lib/netstandard2.0/Blazor.FileReader.xml",
+        "lib/netstandard2.0/Tewr.Blazor.FileReader.dll",
+        "staticwebassets/FileReaderComponent.js",
+        "staticwebassets/FileReaderComponent.js.map",
+        "tewr.blazor.filereader.2.0.0.20200.nupkg.sha512",
+        "tewr.blazor.filereader.nuspec"
+      ]
+    },
     "Entities/1.0.0": {
       "type": "project",
       "path": "../Entities/Entities.csproj",
@@ -7964,7 +8003,8 @@
       "Microsoft.AspNetCore.Components.WebAssembly.Build >= 3.2.1",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 3.2.1",
       "Microsoft.AspNetCore.WebUtilities >= 2.2.0",
-      "System.Net.Http.Json >= 3.2.0"
+      "System.Net.Http.Json >= 3.2.0",
+      "Tewr.Blazor.FileReader >= 2.0.0.20200"
     ]
   },
   "packageFolders": {
@@ -8029,6 +8069,10 @@
           "System.Net.Http.Json": {
             "target": "Package",
             "version": "[3.2.0, )"
+          },
+          "Tewr.Blazor.FileReader": {
+            "target": "Package",
+            "version": "[2.0.0.20200, )"
           }
         },
         "imports": [
