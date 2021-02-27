@@ -2,19 +2,20 @@
 
 <h2>Create House Form</h2>
 
-<EditForm Model="_region" OnSubmit="Create" class="card card-body bg-light mt-5">
-
+<EditForm Model="_region" OnValidSubmit="Create" class="card card-body bg-light mt-5">
+    <DataAnnotationsValidator />
 
 
     <div class="form-group row">
         <label for="description" class="col-md-2 col-form-label">Name:</label>
         <div class="col-md-10">
             <InputText id="description" class="form-control" @bind-Value="_region.Name" />
+            <ValidationMessage For="@(() => _region.Name)" />
         </div>
     </div>
 
 
-  
+
 
 
     <div class="row">

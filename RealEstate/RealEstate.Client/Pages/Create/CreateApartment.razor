@@ -2,14 +2,15 @@
 
 <h2>Create Apartment Form</h2>
 
-<EditForm Model="_apartment" OnSubmit="Create" class="card card-body bg-light mt-5">
+<EditForm Model="_apartment" OnValidSubmit="Create" class="card card-body bg-light mt-5">
 
-   
+    <DataAnnotationsValidator />
 
     <div class="form-group row">
         <label for="description" class="col-md-2 col-form-label">Description:</label>
         <div class="col-md-10">
             <InputText id="description" class="form-control" @bind-Value="_apartment.Description" />
+            <ValidationMessage For="@(() => _apartment.Description)" />
         </div>
     </div>
 
@@ -17,6 +18,7 @@
         <label for="floorno" class="col-md-2 col-form-label">Floor Number:</label>
         <div class="col-md-10">
             <InputNumber id="floorno" class="form-control" @bind-Value="_apartment.FloorNo" />
+            <ValidationMessage For="@(() => _apartment.FloorNo)" /> 
         </div>
     </div>
 
@@ -24,6 +26,7 @@
         <label for="imageurl" class="col-md-2 col-form-label">Image:</label>
         <div class="col-md-10">
             <InputText id="imageurl" class="form-control" @bind-Value="_apartment.ImageURL" />
+
         </div>
     </div>
 
@@ -31,6 +34,7 @@
         <label for="numofrooms" class="col-md-2 col-form-label">Number Of Rooms:</label>
         <div class="col-md-10">
             <InputNumber id="numofrooms" class="form-control" @bind-Value="_apartment.NumOfRooms" />
+            <ValidationMessage For="@(() => _apartment.NumOfRooms)" />
         </div>
     </div>
 
@@ -38,6 +42,7 @@
         <label for="price" class="col-md-2 col-form-label">Price:</label>
         <div class="col-md-10">
             <InputNumber id="price" class="form-control" @bind-Value="_apartment.Price" />
+            <ValidationMessage For="@(() => _apartment.Price)" />
         </div>
     </div>
 
@@ -54,6 +59,7 @@
         <label for="square" class="col-md-2 col-form-label">Square(m²):</label>
         <div class="col-md-10">
             <InputNumber id="square" class="form-control" @bind-Value="_apartment.Square" />
+            <ValidationMessage For="@(() => _apartment.Square)" />
         </div>
     </div>
 

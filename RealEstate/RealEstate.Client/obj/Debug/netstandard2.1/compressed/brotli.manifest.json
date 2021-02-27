@@ -1,7 +1,7 @@
 {
   "FilesToCompress": [
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\HawKklzEA4Dwi9Mra-teCy-C-bKOvmzbZqLp-POgSbg=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\mo8VpNsPFgjHqwlWVO_ETFx4JPPrnVcRIaO9AE3KEbo=.hash",
       "Source": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate.Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\RealEstate.Client.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/RealEstate.Client.dll.br"
     },
@@ -206,7 +206,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\8TquvesAjhfeobO3uF-xC_KKE7uSngO7vG16M_zwhWc=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\eZiizckvu6NAs_VETbn1_dGK5EIgq9r-yd-E5rCqRBQ=.hash",
       "Source": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate.Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Entities.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Entities.dll.br"
     },
@@ -376,12 +376,12 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\sQnM4FJKpGlF-d7sJ9ADsLAVg3UNIn1hgd0I7rSEM90=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Gr5gqVMW43Yjx6I_fDU1XSeRtO3IagoZ3ZNoFc28-Gc=.hash",
       "Source": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate.Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\RealEstate.Client.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/RealEstate.Client.pdb.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\hMgmm15p8C0CuWZYPCMmq4sgK3if2a-gAyK4BBMQpYg=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\-56GgaH1eIsjee2GprO0KObb7ZVFU5uNLgWsI95eDXQ=.hash",
       "Source": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate.Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Entities.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Entities.pdb.br"
     },
@@ -411,12 +411,12 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.webassembly.js.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\biTUDUjluVYm9XhUcV6Wtq_H44YoKh4f9xWphcP_GHc=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\D89xOs6XlIUgKj3TbBYxz22speFLWfgj0rp-XAs7xPM=.hash",
       "Source": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate.Client\\obj\\Debug\\netstandard2.1\\blazor\\blazor.boot.json",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.boot.json.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\vvtXN9xCXMkq5XrnYppMWsx-GU9PPRk31L9uVIX-4zM=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Nx-k88zWReq_rtMdDL53SRrq5Vr9yrKK6kKABVNMuMA=.hash",
       "Source": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate.Client\\obj\\Debug\\netstandard2.1\\blazor\\service-worker-assets.js",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\service-worker-assets.js.br"
     }

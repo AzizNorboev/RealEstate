@@ -2,14 +2,15 @@
 
 <h2>Create House Form</h2>
 
-<EditForm Model="_house" OnSubmit="Create" class="card card-body bg-light mt-5">
+<EditForm Model="_house" OnValidSubmit="Create" class="card card-body bg-light mt-5">
 
-
+    <DataAnnotationsValidator />
 
     <div class="form-group row">
         <label for="description" class="col-md-2 col-form-label">Description:</label>
         <div class="col-md-10">
             <InputText id="description" class="form-control" @bind-Value="_house.Description" />
+            <ValidationMessage For="@(() => _house.Description)" />
         </div>
     </div>
 
@@ -25,6 +26,7 @@
         <label for="numofrooms" class="col-md-2 col-form-label">Number Of Rooms:</label>
         <div class="col-md-10">
             <InputNumber id="numofrooms" class="form-control" @bind-Value="_house.NumOfRooms" />
+            <ValidationMessage For="@(() => _house.NumOfRooms)" />
         </div>
     </div>
 
@@ -32,6 +34,7 @@
         <label for="price" class="col-md-2 col-form-label">Price:</label>
         <div class="col-md-10">
             <InputNumber id="price" class="form-control" @bind-Value="_house.Price" />
+            <ValidationMessage For="@(() => _house.Price)" />
         </div>
     </div>
 
@@ -48,6 +51,7 @@
         <label for="square" class="col-md-2 col-form-label">Square(m²):</label>
         <div class="col-md-10">
             <InputNumber id="square" class="form-control" @bind-Value="_house.Square" />
+            <ValidationMessage For="@(() => _house.Square)" />
         </div>
     </div>
 

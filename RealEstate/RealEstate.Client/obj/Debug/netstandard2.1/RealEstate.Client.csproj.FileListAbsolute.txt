@@ -530,8 +530,6 @@ C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debu
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\RazorDeclaration\Components\Sort.razor.g.cs
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Create\CreateApartment.razor.g.cs
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Create\CreateHouse.razor.g.cs
-C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\8TquvesAjhfeobO3uF-xC_KKE7uSngO7vG16M_zwhWc=.hash
-C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\hMgmm15p8C0CuWZYPCMmq4sgK3if2a-gAyK4BBMQpYg=.hash
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Create\CreateRegion.razor.g.cs
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Tewr.Blazor.FileReader.dll
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Tewr.Blazor.FileReader.dll.gz
@@ -571,8 +569,10 @@ C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debu
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\Razor\Pages\Update\UpdateHouse.razor.g.cs
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Update\UpdateRegion.razor.g.cs
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\Razor\Pages\Update\UpdateRegion.razor.g.cs
-C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\lLYH4T4JfFeCfrrrXIKoBYSfskxothZAu-M2YrSE7w4=.hash
-C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\HawKklzEA4Dwi9Mra-teCy-C-bKOvmzbZqLp-POgSbg=.hash
-C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\sQnM4FJKpGlF-d7sJ9ADsLAVg3UNIn1hgd0I7rSEM90=.hash
-C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\biTUDUjluVYm9XhUcV6Wtq_H44YoKh4f9xWphcP_GHc=.hash
-C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\vvtXN9xCXMkq5XrnYppMWsx-GU9PPRk31L9uVIX-4zM=.hash
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\0ZlkP6LoG1luF3MiPhskrzbXpOmpnPZbfdEL_LfayHg=.hash
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\mo8VpNsPFgjHqwlWVO_ETFx4JPPrnVcRIaO9AE3KEbo=.hash
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\eZiizckvu6NAs_VETbn1_dGK5EIgq9r-yd-E5rCqRBQ=.hash
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\Gr5gqVMW43Yjx6I_fDU1XSeRtO3IagoZ3ZNoFc28-Gc=.hash
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\-56GgaH1eIsjee2GprO0KObb7ZVFU5uNLgWsI95eDXQ=.hash
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\D89xOs6XlIUgKj3TbBYxz22speFLWfgj0rp-XAs7xPM=.hash
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\Nx-k88zWReq_rtMdDL53SRrq5Vr9yrKK6kKABVNMuMA=.hash
