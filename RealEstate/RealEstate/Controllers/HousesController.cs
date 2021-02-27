@@ -26,7 +26,7 @@ namespace RealEstate.Controllers
         //public async Task<IActionResult> Get()
         //{
         //    var houses = await _houseRepo.GetAllAsync();
-        //    return Ok(houses); //TODO: Will use a simpler way of displaying data from codemaze. Generics didnt work
+        //    return Ok(houses); //TODO: Will use a simpler way of displaying data. Generics didnt work
         //}
 
         public async Task<IActionResult> Get([FromQuery] EntityParameters entityParameters)
@@ -42,10 +42,10 @@ namespace RealEstate.Controllers
             if (house == null)
                 return BadRequest();
 
-            //if (!ModelState.IsValid)
-            //{
-
-            //}
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Invalid model object");
+            }
             await _houseRepo.CreateAsync(house);
 
             return Created("", house);
@@ -61,12 +61,15 @@ namespace RealEstate.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct(int id, [FromBody] House house)
         {
-            //additional product and model validation checks
+            
 
             var dbHouse = await _houseRepo.GetByIdAsync(id);
             if (dbHouse == null)
                 return NotFound();
-
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Invalid model object");
+            }
             await _houseRepo.UpdateAsync(house, dbHouse);
 
             return NoContent();

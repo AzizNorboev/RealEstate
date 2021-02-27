@@ -41,10 +41,10 @@ namespace RealEstate.Controllers
             if (region == null)
                 return BadRequest();
 
-            //if (!ModelState.IsValid)
-            //{
-
-            //}
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Invalid model object");
+            }
             await _regionRepo.CreateAsync(region);
 
             return Created("", region);
@@ -60,12 +60,15 @@ namespace RealEstate.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct(int id, [FromBody] Region region)
         {
-            //additional product and model validation checks
+
 
             var dbRegion = await _regionRepo.GetByIdAsync(id);
             if (dbRegion == null)
                 return NotFound();
-
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Invalid model object");
+            }
             await _regionRepo.UpdateAsync(region, dbRegion);
 
             return NoContent();

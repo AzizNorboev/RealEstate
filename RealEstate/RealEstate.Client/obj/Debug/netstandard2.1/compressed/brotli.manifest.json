@@ -1,7 +1,7 @@
 {
   "FilesToCompress": [
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\GftRO07YIe8gOsOVDAF1BOj_DUxLjS4QXVzs76J9RDk=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\1Kw47HeSE0RrBk83QvtHAVWZ0Z3oc9ycuDGo3WcQIVk=.hash",
       "Source": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate.Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\RealEstate.Client.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/RealEstate.Client.dll.br"
     },
@@ -376,7 +376,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\85CwlL-3w9dglAM0T_EIEywiywph7pUk20Jut7bsaUM=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\uZZ3L0SFNpqEuTsoPrqAWwZZh2_xRhCeF1_J4rNjXUM=.hash",
       "Source": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate.Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\RealEstate.Client.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/RealEstate.Client.pdb.br"
     },
@@ -411,12 +411,12 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.webassembly.js.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\eoAIiCByy-P-MdLX3xPHITxU0aygEI4auC35Z4vUpko=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Lv0bvH_PBscNf0g0GhpnW-vPQoZhBi62ETVZd64Jfbc=.hash",
       "Source": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate.Client\\obj\\Debug\\netstandard2.1\\blazor\\blazor.boot.json",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.boot.json.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\9R3AfyjAXP0WufUEQ3hkk8c9qXbwa--dMOyEHyS6JZg=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Hpzgr15n34tNkDdoRERC4Wza5O83CuMjzS8dDdbv2E8=.hash",
       "Source": "C:\\Users\\Admin\\Documents\\GitHub\\RealEstate\\RealEstate\\RealEstate.Client\\obj\\Debug\\netstandard2.1\\blazor\\service-worker-assets.js",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\service-worker-assets.js.br"
     }

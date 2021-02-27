@@ -41,12 +41,11 @@ namespace RealEstate.Controllers
             if (apartment == null)
                 return BadRequest();
 
-            //if (!ModelState.IsValid)
-            //{
-              
-            //}
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Invalid model object");
+            }
             await _apartmentRepo.CreateAsync(apartment);
-
             return Created("", apartment);
         }
 
@@ -60,14 +59,17 @@ namespace RealEstate.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct(int id, [FromBody]Apartment apartment)
         {
-            //additional product and model validation checks
+            
 
             var dbApartment = await _apartmentRepo.GetByIdAsync(id);
             if (dbApartment == null)
                 return NotFound();
 
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Invalid model object");
+            }
             await _apartmentRepo.UpdateAsync(apartment, dbApartment);
-
             return NoContent();
         }
 

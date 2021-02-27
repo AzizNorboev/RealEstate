@@ -8,8 +8,9 @@
                 
                 <th scope="col">Area</th>
                 <th scope="col">Description</th>
-                <th scope="col">Status</th>
                 <th scope="col">City</th>
+                <th scope="col">Status</th>
+                
                 <th scope="col">Price</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
@@ -33,9 +34,9 @@
                     @house.Description
                 </td>
 
-                @*<td class="align-middle">
-            @house.Region.Name not working so far
-        </td>*@
+                <td class="align-middle">
+                    @house.RegionId
+                </td>
                 <td class="align-middle">
                     @house.Status
                 </td>
