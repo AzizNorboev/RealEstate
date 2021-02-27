@@ -77,7 +77,7 @@
       "url": "sample-data\/weather.json"
     },
     {
-      "hash": "sha256-mo8VpNsPFgjHqwlWVO+ETFx4JPPrnVcRIaO9AE3KEbo=",
+      "hash": "sha256-GftRO07YIe8gOsOVDAF1BOj+DUxLjS4QXVzs76J9RDk=",
       "url": "_framework\/_bin\/RealEstate.Client.dll"
     },
     {
@@ -377,7 +377,7 @@
       "url": "_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-Gr5gqVMW43Yjx6I+fDU1XSeRtO3IagoZ3ZNoFc28\/Gc=",
+      "hash": "sha256-85CwlL\/3w9dglAM0T+EIEywiywph7pUk20Jut7bsaUM=",
       "url": "_framework\/_bin\/RealEstate.Client.pdb"
     },
     {
@@ -405,9 +405,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-D89xOs6XlIUgKj3TbBYxz22speFLWfgj0rp\/XAs7xPM=",
+      "hash": "sha256-eoAIiCByy\/P\/MdLX3xPHITxU0aygEI4auC35Z4vUpko=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "hQGgn74A"
+  "version": "dcGP7dYH"
 };

@@ -13,6 +13,7 @@
             <label for="name" class="col-md-2 col-form-label">Name:</label>
             <div class="col-md-10">
                 <InputText id="name" class="form-control" @bind-Value="_region.Name" />
+                <ValidationMessage For="@(() => _region.Name)" />
             </div>
         </div>
 
