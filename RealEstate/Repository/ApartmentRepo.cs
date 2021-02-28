@@ -42,7 +42,7 @@ namespace Repository
         {
 
             var apartments = await _context.Apartments
-                //.Include(a => a.Region)
+               .Include(a => a.Region)
               .Search(entityParameters.SearchTerm)
               .Sort(entityParameters.OrderBy)
               .ToListAsync();

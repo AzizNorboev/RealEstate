@@ -571,8 +571,8 @@ C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debu
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\Razor\Pages\Update\UpdateRegion.razor.g.cs
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\eZiizckvu6NAs_VETbn1_dGK5EIgq9r-yd-E5rCqRBQ=.hash
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\-56GgaH1eIsjee2GprO0KObb7ZVFU5uNLgWsI95eDXQ=.hash
-C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\W1ZxqxnL5b3v_6SaRDlD5QKmUeASVZmE-lsa_AUHIZE=.hash
-C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\1Kw47HeSE0RrBk83QvtHAVWZ0Z3oc9ycuDGo3WcQIVk=.hash
-C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\uZZ3L0SFNpqEuTsoPrqAWwZZh2_xRhCeF1_J4rNjXUM=.hash
-C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\Lv0bvH_PBscNf0g0GhpnW-vPQoZhBi62ETVZd64Jfbc=.hash
-C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\Hpzgr15n34tNkDdoRERC4Wza5O83CuMjzS8dDdbv2E8=.hash
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\601zpW-YXt6plar4I1lEoxkeaXtCFWJmEvX14n1LjN8=.hash
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\YPfbps-5feeqMXQFsqdw0LilmFFfP7fLFsP2uqyeqJA=.hash
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\vSNIemCotJi9xm9n98dE7yX04Dd_duNn2cUzeQFDbGM=.hash
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\QSrrLA93aaq-PSZT4eCzslWAOQvzUbzVu1rgWprDh4Y=.hash
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\obj\Debug\netstandard2.1\integrity\E4h39SviYq7TR3aZ6RcGT49aAi4rt924KTVnzeV-pQg=.hash

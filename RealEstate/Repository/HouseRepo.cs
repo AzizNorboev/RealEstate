@@ -42,6 +42,7 @@ namespace Repository
         public async Task<PagedList<House>> GetAllAsync(EntityParameters entityParameters)
         {
             var houses = await _context.Houses
+                .Include(h => h.Region)
              .Search(entityParameters.SearchTerm)
              .Sort(entityParameters.OrderBy)
              .ToListAsync();

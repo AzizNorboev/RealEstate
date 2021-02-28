@@ -17,7 +17,7 @@ namespace RealEstate.Client.Pages.Create
 
         [Inject]
         public IPropertyHttpRepository<Apartment> ApartmentRepo { get; set; }
-
+        //TODO: Region should be chosen not inserted by user
         private async Task Create()
         {
             await ApartmentRepo.CreateAsync(_apartment);

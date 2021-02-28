@@ -127,5 +127,8 @@ C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netco
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.pdb
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.genruntimeconfig.cache
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\bin\Debug\netcoreapp3.1\System.Linq.Dynamic.Core.dll
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\RealEstate\RealEstate\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.MvcApplicationPartsAssemblyInfo.cache
