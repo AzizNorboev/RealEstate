@@ -1,15 +1,109 @@
 ﻿@inherits LayoutComponentBase
+@*<style>
+         body{
+             margin: 0;
+             font-family: Arial, Helvetica, sans-serif;
+             font-size: 30px;
+         }
 
-<div class="sidebar">
+        nav {
+            height: 100px;
+            background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .Logo{
+            margin:  0 1px 4px; 20px;
+        }
+
+        .navlinkcontainer{
+            margin-right: 15px;
+            display:flex;
+        }
+        .navlinkcontainer a{
+            text-decoration: none;
+            margin: 0 10px 15px;
+            color:aliceblue;
+            position: relative;
+        }
+        .navlinkcontainer a:active{
+            color:aquamarine
+        }
+        .navlinkcontainer a:after{
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            display: block;
+            height: 10px;
+            width: 0;
+            transition: .7s all linear;
+            background-color: aqua;
+        }
+        .navlinkcontainer a.active:after{
+            width: 100%;
+        }
+        .navlinkcontainer a:hover:after{
+            width: 100%;
+        }
+    </style>
+
+    <nav>
+        <h1 class="Logo">Real Estate</h1>
+        <div class="navlinkcontainer">
+            <NavLink Match="NavLinkMatch.All" href="/">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+            <NavLink class="nav-link" href="counter">
+                <span class="oi oi-plus" aria-hidden="true"></span> Counter
+            </NavLink>
+            <NavLink class="nav-link" href="apartments">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Apartments
+            </NavLink>
+            <NavLink class="nav-link" href="houses">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Houses
+            </NavLink>
+            <NavLink class="nav-link" href="regions">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Regions
+            </NavLink>
+        </div>
+    </nav>
+
+    @Body*@
+
+
+
+
+
+
+
+
+<!--second try =)-->
+<body>
     <NavMenu />
-</div>
 
-<div class="main">
-    <div class="top-row px-4">
-        <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-    </div>
-
-    <div class="content px-4">
+    <div class="container">
         @Body
     </div>
-</div>
+</body>
+
+
+
+
+
+
+
+@*<div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <div class="main">
+        <div class="top-row px-4">
+            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
+        </div>
+
+        <div class="content px-4">
+            @Body
+        </div>
+    </div>*@

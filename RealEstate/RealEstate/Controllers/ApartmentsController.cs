@@ -57,7 +57,7 @@ namespace RealEstate.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProduct(int id, [FromBody]Apartment apartment)
+        public async Task<IActionResult> UpdateAsync(int id, [FromBody]Apartment apartment)
         {
             
 

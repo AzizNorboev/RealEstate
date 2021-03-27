@@ -58,7 +58,7 @@ namespace RealEstate.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProduct(int id, [FromBody] Region region)
+        public async Task<IActionResult> Update(int id, [FromBody] Region region)
         {
 
 
@@ -77,7 +77,7 @@ namespace RealEstate.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
-           
+
 
             await _regionRepo.DeleteAsync(id);
 
