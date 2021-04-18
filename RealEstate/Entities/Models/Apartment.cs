@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
+
 
 namespace Entities.Models
 {
     public class Apartment
     {
-        
+
         public int Id { get; set; }
 
+
+        //As my Lecturer says for the sake of simplicity
+        //I've used double instead of decimal for price
         [Required(ErrorMessage = "Price is required")]
         public double Price { get; set; }
 
@@ -32,7 +32,7 @@ namespace Entities.Models
 
         public string ImageURL { get; set; }
 
-        
+
         public int? RegionId { get; set; }
 
         public virtual Region Region { get; set; }

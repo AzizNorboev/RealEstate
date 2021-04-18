@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class HouseRepo : RepositoryBase, IRepositoryBase<House>
+    public class HouseRepo : RepositoryBase, IRepository<House>
     {
 
         public HouseRepo(RepoContext context)
@@ -19,58 +19,50 @@ namespace Repository
         {
         }
 
-        //public async Task<IEnumerable<House>> GetHouses()
-        //{
-        //   return await _context.Houses.ToListAsync();
-        //}
-
-        public async Task CreateAsync(House house)
+        public async Task Create(House entity)
         {
-            _context.Add(house);
+            _context.Add(entity);
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task Update(House entity, House dbEntity)
+        {
+            dbEntity.Description = entity.Description;
+            dbEntity.ImageURL = entity.ImageURL;
+            dbEntity.NumOfRooms = entity.NumOfRooms;
+            dbEntity.Price = entity.Price;
+            dbEntity.RegionId = entity.RegionId;
+            dbEntity.Square = entity.Square;
+            dbEntity.Status = entity.Status;
+
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task Delete(int id)
         {
             var house = await _context.Houses.FindAsync(id);
             _context.Houses.Remove(house);
             await _context.SaveChangesAsync();
         }
 
-    
-
-        public async Task<PagedList<House>> GetAllAsync(EntityParameters entityParameters)
+        public async Task<PagedList<House>> GetAll(EntityParameters entityParameters)
         {
             var houses = await _context.Houses
-                .Include(h => h.Region)
-             .Search(entityParameters.SearchTerm)
-             .Sort(entityParameters.OrderBy)
-             .ToListAsync();
+               .Include(h => h.Region)
+            .Search(entityParameters.SearchTerm)
+            .Sort(entityParameters.OrderBy)
+            .ToListAsync();
+
 
             return PagedList<House>
                 .ToPagedList(houses, entityParameters.PageNumber, entityParameters.PageSize);
         }
 
-        public async Task<House> GetByIdAsync(int id)
+        public async Task<House> GetById(int id)
         {
             return await _context.Houses
                 .FirstOrDefaultAsync(m => m.Id == id);
-        }
-
-        public async Task UpdateAsync(House entity, House dbHouse)
-        {
-            dbHouse.Description = entity.Description;
-            
-            dbHouse.ImageURL = entity.ImageURL;
-            dbHouse.NumOfRooms = entity.NumOfRooms;
-            dbHouse.Price = entity.Price;
-            dbHouse.RegionId = entity.RegionId;
-            dbHouse.Square = entity.Square;
-            dbHouse.Status = entity.Status;
-
-
-            await _context.SaveChangesAsync();
-            await _context.SaveChangesAsync();
         }
     }
 }

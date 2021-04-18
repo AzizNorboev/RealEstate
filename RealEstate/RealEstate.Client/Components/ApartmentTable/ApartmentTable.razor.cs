@@ -13,8 +13,6 @@ namespace RealEstate.Client.Components.ApartmentTable
     {
         [Parameter]
         public List<Apartment> Apartments { get; set; }
-        //[Parameter]
-        //public List<Region> Regions { get; set; }
 
         [Inject]
         public NavigationManager NavigationManager { get; set; }
@@ -25,6 +23,11 @@ namespace RealEstate.Client.Components.ApartmentTable
             NavigationManager.NavigateTo(url);
         }
 
+        private void RedirectToDetails(int id)
+        {
+            var url = Path.Combine("/apartmentDetails/", id.ToString());
+            NavigationManager.NavigateTo(url);
+        }
 
         [Parameter]
         public EventCallback<int> OnDeleted { get; set; }

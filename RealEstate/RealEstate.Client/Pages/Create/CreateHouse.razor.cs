@@ -12,14 +12,18 @@ namespace RealEstate.Client.Pages.Create
     public partial class CreateHouse
     {
         private readonly House _house= new House();
+
         private SuccessNotification _notification;
+
         [Inject]
-        public IPropertyHttpRepository<House> HouseRepo { get; set; }
+        public IHttpRepository<House> HouseRepo { get; set; }
 
         private async Task Create()
         {
             await HouseRepo.CreateAsync(_house);
             _notification.Show();
+
         }
+        private void AssignImageUrl(string imgUrl) => _house.ImageURL = imgUrl;
     }
 }

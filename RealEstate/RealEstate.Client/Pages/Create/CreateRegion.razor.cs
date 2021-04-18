@@ -12,9 +12,11 @@ namespace RealEstate.Client.Pages.Create
     public partial class CreateRegion
     {
         private readonly Region _region = new Region();
+
         private SuccessNotification _notification;
+
         [Inject]
-        public IPropertyHttpRepository<Region> RegionRepo { get; set; }
+        public IHttpRepository<Region> RegionRepo { get; set; }
 
         private async Task Create()
         {

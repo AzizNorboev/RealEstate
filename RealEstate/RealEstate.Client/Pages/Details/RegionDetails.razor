@@ -1,0 +1,39 @@
+﻿@page "/regionDetails/{id}"
+
+<h2>Details</h2>
+
+@if (_region != null)
+{
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Apartments</th>
+                <th scope="col">Houses</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+
+                <td class="align-middle">
+                    @_region.Id
+                </td>
+                <td class="align-middle">
+                    @_region.Name
+                </td>
+                <td class="align-middle">
+                    @_region.Apartments
+                </td>
+                <td class="align-middle">
+                    @_region.Houses
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+}

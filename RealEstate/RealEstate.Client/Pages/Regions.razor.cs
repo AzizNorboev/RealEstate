@@ -15,32 +15,32 @@ namespace RealEstate.Client.Pages
         public MetaData MetaData { get; set; } = new MetaData();
         private EntityParameters _regionParameters = new EntityParameters();
 
-        [Inject]
-        public IPropertyHttpRepository<Region> RegionRepo { get; set; }
+        [Inject]//we are injectiong the interface to call the GetAll method
+        public IHttpRepository<Region> RegionRepo { get; set; }
 
         protected async override Task OnInitializedAsync()
         {
-            await GetProperty();
-           
+            await GetAll();
+
         }
 
         private async Task SelectedPage(int page)
         {
             _regionParameters.PageNumber = page;
-            await GetProperty();
+            await GetAll();
         }
-        private async Task GetProperty()
+        private async Task GetAll()
         {
-            var pagingResponse = await RegionRepo.GetProperty(_regionParameters);
+            var pagingResponse = await RegionRepo.GetAll(_regionParameters);
             RegionList = pagingResponse.Items;
             MetaData = pagingResponse.MetaData;
         }
 
         private async Task DeleteRegion(int id)
         {
-            await RegionRepo.DeleteProperty(id);
+            await RegionRepo.DeleteAsync(id);
             _regionParameters.PageNumber = 1;
-            await GetProperty();
+            await GetAll();
         }
     }
 }

@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
+
 
 namespace Entities.Models
 {
@@ -13,6 +12,6 @@ namespace Entities.Models
 
         public virtual ICollection<Apartment> Apartments { get; set; }
 
-        public virtual ICollection <House> Houses { get; set; }
+        public virtual ICollection<House> Houses { get; set; }
     }
 }

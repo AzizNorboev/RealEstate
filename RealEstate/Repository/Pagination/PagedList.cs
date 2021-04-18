@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace Repository.Pagination
-{
+{//this class is in repository project, because it is used in the within this project
     public class PagedList<T> : List<T>
     {
         public MetaData MetaData { get; set; }
@@ -23,6 +23,8 @@ namespace Repository.Pagination
             AddRange(items);
         }
 
+        //in this method we count the elements inside the source collection
+        //and take the items by applying the skip and take methods
         public static PagedList<T> ToPagedList(IEnumerable<T> source, int pageNumber, int pageSize)
         {
             var count = source.Count();

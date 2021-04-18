@@ -1,9 +1,7 @@
 ﻿using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace Entities.Configuration
 {
@@ -23,7 +21,7 @@ namespace Entities.Configuration
                      Description = "a cool place",
                      Status = HouseStatus.ForRent,
                      RegionId = 1
-                     
+
                  },
 
                  new House
@@ -36,7 +34,7 @@ namespace Entities.Configuration
                      Description = "house for sale asap",
                      Status = HouseStatus.ForSale,
                      RegionId = 1
-                     
+
                  },
 
                  new House
@@ -49,7 +47,7 @@ namespace Entities.Configuration
                      Description = "good house",
                      Status = HouseStatus.ForRent,
                      RegionId = 1
-                     
+
                  },
 
                  new House
@@ -62,7 +60,7 @@ namespace Entities.Configuration
                      Description = "in a good condition ",
                      Status = HouseStatus.ForSale,
                      RegionId = 1
-                     
+
                  },
                    new House
                    {
@@ -74,7 +72,7 @@ namespace Entities.Configuration
                        Description = "something should've been written here so I wrote",
                        Status = HouseStatus.ForRent,
                        RegionId = 1
-                       
+
                    },
 
                     new House
@@ -87,7 +85,7 @@ namespace Entities.Configuration
                         Description = "some description",
                         Status = HouseStatus.ForSale,
                         RegionId = 1
-                        
+
                     }
                  );
         }

@@ -1,33 +1,30 @@
 ﻿using Entities.Features;
 using Entities.Models;
-using RealEstate.Client.Features;
 using Microsoft.AspNetCore.WebUtilities;
+using RealEstate.Client.Features;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using System.Text;
-using System.IO;
 
 namespace RealEstate.Client.HttpRepository
 {
-    public class ApartmentHttpRepository : IPropertyHttpRepository<Apartment>
+    public class ApartmentHttpRepository : HttpRepositoryBase, IHttpRepository<Apartment>
     {
-        private readonly HttpClient _client;
-        
-
         public ApartmentHttpRepository(HttpClient client)
+           : base(client)
         {
-            _client = client;
         }
 
         public async Task CreateAsync(Apartment apartment)
         {
             var content = JsonSerializer.Serialize(apartment);
             var bodyContent = new StringContent(content, Encoding.UTF8, "application/json");
-            var postResult = await _client.PostAsync("https://localhost:5011/api/apartments", bodyContent);
+            var postResult = await _client.PostAsync("https://localhost:5021/api/apartments", bodyContent);
             var postContent = await postResult.Content.ReadAsStringAsync();
             if (!postResult.IsSuccessStatusCode)
             {
@@ -35,9 +32,9 @@ namespace RealEstate.Client.HttpRepository
             }
         }
 
-        public async Task DeleteProperty(int id)
+        public async Task DeleteAsync(int id)
         {
-            var url = Path.Combine("https://localhost:5011/api/apartments", id.ToString());
+            var url = Path.Combine("https://localhost:5021/api/apartments", id.ToString());
 
             var deleteResult = await _client.DeleteAsync(url);
             var deleteContent = await deleteResult.Content.ReadAsStringAsync();
@@ -47,17 +44,8 @@ namespace RealEstate.Client.HttpRepository
             }
         }
 
-
-
-        //public async Task<List<Apartment>> GetProperty()
-        //{
-        //    var response = await _client.GetAsync("https://localhost:5011/api/apartments");
-        //    var content = await response.Content.ReadAsStringAsync();
-        //    var apartments = JsonSerializer.Deserialize<List<Apartment>>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-        //    return apartments;
-        //}
-
-        public async Task<PagingResponse<Apartment>> GetProperty(EntityParameters entityParameters)
+        //passing an entire URI to the server endpoint
+        public async Task<PagingResponse<Apartment>> GetAll(EntityParameters entityParameters)
         {
             var queryStringParam = new Dictionary<string, string>
             {
@@ -66,7 +54,7 @@ namespace RealEstate.Client.HttpRepository
                 ["orderBy"] = entityParameters.OrderBy
             };
 
-            var response = await _client.GetAsync(QueryHelpers.AddQueryString("https://localhost:5011/api/apartments", queryStringParam));
+            var response = await _client.GetAsync(QueryHelpers.AddQueryString("https://localhost:5021/api/apartments", queryStringParam));
             var content = await response.Content.ReadAsStringAsync();
             if (!response.IsSuccessStatusCode)
             {
@@ -82,9 +70,9 @@ namespace RealEstate.Client.HttpRepository
             return pagingResponse;
         }
 
-        public async Task<Apartment> GetPropertyById(string id)
+        public async Task<Apartment> GetById(string id)
         {
-            var url = Path.Combine("https://localhost:5011/api/apartments/", id);
+            var url = Path.Combine("https://localhost:5021/api/apartments/", id);
 
             var response = await _client.GetAsync(url);
             var content = await response.Content.ReadAsStringAsync();
@@ -96,11 +84,13 @@ namespace RealEstate.Client.HttpRepository
             var apartment = JsonSerializer.Deserialize<Apartment>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
             return apartment;
         }
-        public async Task UpdateProperty(Apartment apartment)
+
+
+        public async Task UpdateAsync(Apartment entity)
         {
-            var content = JsonSerializer.Serialize(apartment);
+            var content = JsonSerializer.Serialize(entity);
             var bodyContent = new StringContent(content, Encoding.UTF8, "application/json");
-            var url = Path.Combine("https://localhost:5011/api/apartments/", apartment.Id.ToString());
+            var url = Path.Combine("https://localhost:5021/api/apartments/", entity.Id.ToString());
 
             var putResult = await _client.PutAsync(url, bodyContent);
             var putContent = await putResult.Content.ReadAsStringAsync();
@@ -111,5 +101,19 @@ namespace RealEstate.Client.HttpRepository
             }
         }
 
+        public async Task<string> UploadImage(MultipartFormDataContent content)
+        {
+            var postResult = await _client.PostAsync("https://localhost:5021/api/upload", content);
+            var postContent = await postResult.Content.ReadAsStringAsync();
+            if (!postResult.IsSuccessStatusCode)
+            {
+                throw new ApplicationException(postContent);
+            }
+            else
+            {
+                var imgUrl = Path.Combine("https://localhost:5021/", postContent);
+                return imgUrl;
+            }
+        }
     }
 }

@@ -2,9 +2,6 @@
 using Microsoft.AspNetCore.Components;
 using RealEstate.Client.HttpRepository;
 using RealEstate.Client.Shared;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace RealEstate.Client.Pages.Update
@@ -14,17 +11,18 @@ namespace RealEstate.Client.Pages.Update
         private House _house;
         private SuccessNotification _notification;
         [Inject]
-        IPropertyHttpRepository<House> HouseRepo { get; set; }
+        IHttpRepository<House> HouseRepo { get; set; }
         [Parameter]
         public string Id { get; set; }
         protected async override Task OnInitializedAsync()
         {
-            _house = await HouseRepo.GetPropertyById(Id);
+            _house = await HouseRepo.GetById(Id);
         }
         private async Task Update()
         {
-            await HouseRepo.UpdateProperty(_house);
+            await HouseRepo.UpdateAsync(_house);
             _notification.Show();
         }
+        private void AssignImageUrl(string imgUrl) => _house.ImageURL = imgUrl;
     }
 }

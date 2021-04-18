@@ -4,8 +4,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:52497",
-      "sslPort": 44316
+      "applicationUrl": "http://localhost:60922",
+      "sslPort": 44300
     }
   },
   "profiles": {
@@ -18,8 +18,8 @@
     },
     "RealEstate": {
       "commandName": "Project",
-      "launchBrowser": false,
-      "applicationUrl": "https://localhost:5011;http://localhost:5010",
+      "launchBrowser": false,//it is false now, because data will be fetched and displayed by blazor client side
+      "applicationUrl": "https://localhost:5021;http://localhost:5020",//changed url otherwise url of webapi and blazor will be the same
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

@@ -12,8 +12,12 @@ namespace RealEstate.Client.Components
     {
         [Parameter]
         public MetaData MetaData { get; set; }
+
+        //number of page buttons
         [Parameter]
         public int Spread { get; set; }
+
+        //run method from parent component
         [Parameter]
         public EventCallback<int> SelectedPage { get; set; }
 

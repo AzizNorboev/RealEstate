@@ -1,15 +1,15 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-9ii4qjKGPvpLTaicCQnJv0mciOW8fP4btmKpFYjgN78=",
+      "hash": "sha256-M9IaajWSJ80VmbzqkAOB7oo5pXvfoHDpNlCoG2GPFfc=",
       "url": "_content\/Tewr.Blazor.FileReader\/FileReaderComponent.js"
     },
     {
-      "hash": "sha256-eeZxFDw9wtGefPyX5fYtEPuCS\/VyBK8\/FfeXUOo5zF4=",
+      "hash": "sha256-9lXnP+ZTeQbd9bJQWQo+OJBKHmODNqfwawcURC6Wq8Y=",
       "url": "_content\/Tewr.Blazor.FileReader\/FileReaderComponent.js.map"
     },
     {
-      "hash": "sha256-rBylthbu7EpQbeQRXHprc7DKOsUfYVI59V\/aByW1iDo=",
+      "hash": "sha256-o7Xsiyv\/MuqZtOeHjqJVjsxLp4RBV\/UtXdFI0meG9VM=",
       "url": "css\/app.css"
     },
     {
@@ -65,7 +65,19 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-nCoR0B1xh6bLPs9dTyyrrGioF+\/dRe6xRI8UHiBk6W4=",
+      "hash": "sha256-pPIDYGKZTfriqjpYcBiO+9kQpn\/v8KNmKVM4w4ar75g=",
+      "url": "ImagesForMain\/uy.jpg"
+    },
+    {
+      "hash": "sha256-yC2olQXnOzoQssKgUigVhGnV8KjGHweaZ7vnoL4ar8c=",
+      "url": "ImagesForMain\/uy2.jpg"
+    },
+    {
+      "hash": "sha256-2FV1Kb0oWMJZH6MMYxWMLsQRnl66N4YBFeHcE9G\/kVU=",
+      "url": "ImagesForMain\/uy3.jpg"
+    },
+    {
+      "hash": "sha256-HXer1DyWqWny4NzOYqcID+e49JA\/\/\/6YiwIjrWOb+0Y=",
       "url": "index.html"
     },
     {
@@ -77,7 +89,7 @@
       "url": "sample-data\/weather.json"
     },
     {
-      "hash": "sha256-9XXSryar2QQMLba49H2T9AAcEwNx4i4p+rR+3lAIoUU=",
+      "hash": "sha256-YuEqp9vA0rEQdiuj9Gy9fc+LEX3JUazu1pjcNm8FcS4=",
       "url": "_framework\/_bin\/RealEstate.Client.dll"
     },
     {
@@ -241,7 +253,7 @@
       "url": "_framework\/_bin\/Microsoft.JSInterop.dll"
     },
     {
-      "hash": "sha256-eZiizckvu6NAs+VETbn1+dGK5EIgq9r\/yd\/E5rCqRBQ=",
+      "hash": "sha256-xbkGGzCLKvl3LRliSe6F9LuHQ\/eheKxwUCRE1EjCwHY=",
       "url": "_framework\/_bin\/Entities.dll"
     },
     {
@@ -341,7 +353,7 @@
       "url": "_framework\/_bin\/System.Collections.Immutable.dll"
     },
     {
-      "hash": "sha256-+8JsYr0nQtK1U5Ora9CZpNOUQSOY7TzFoOmWTAOtAW4=",
+      "hash": "sha256-llKLg+tAgZP0yy3uVXMJqnfqc1QzLzBaYbMDdWCwkng=",
       "url": "_framework\/_bin\/Tewr.Blazor.FileReader.dll"
     },
     {
@@ -377,11 +389,11 @@
       "url": "_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-otFTHUmOgJj0hZVqoXaIq2Avy7wTEi7d46ds02kKp8g=",
+      "hash": "sha256-exLo0VxTC8JtLHfPFhQ3ICsg5AJCakNUkJdP1QtP8G8=",
       "url": "_framework\/_bin\/RealEstate.Client.pdb"
     },
     {
-      "hash": "sha256-\/56GgaH1eIsjee2GprO0KObb7ZVFU5uNLgWsI95eDXQ=",
+      "hash": "sha256-LjD5LhdNTlCP7Oc0heBbZgQMiFmXQvxMmQloi2Wjztc=",
       "url": "_framework\/_bin\/Entities.pdb"
     },
     {
@@ -405,9 +417,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-QR8NmUPW293G1a06sIb\/qfdV7v9aeDCOfd46VkRVM8Y=",
+      "hash": "sha256-BAVTkKkwBHcTK0TNVoDeW52GmBOP6tSwz9awcA6V+jw=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "9Iwiz3gE"
+  "version": "7oUUrATQ"
 };

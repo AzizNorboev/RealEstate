@@ -13,21 +13,17 @@ using System.Threading.Tasks;
 
 namespace RealEstate.Client.HttpRepository
 {
-    public class RegionHttpRepository : IPropertyHttpRepository<Region>
+    public class RegionHttpRepository : HttpRepositoryBase, IHttpRepository<Region>
     {
-        private readonly HttpClient _client;
-
-
         public RegionHttpRepository(HttpClient client)
-        {
-            _client = client;
-        }
-
+           : base(client)
+    {
+    }
         public async Task CreateAsync(Region region)
         {
             var content = JsonSerializer.Serialize(region);
             var bodyContent = new StringContent(content, Encoding.UTF8, "application/json");
-            var postResult = await _client.PostAsync("https://localhost:5011/api/regions", bodyContent);
+            var postResult = await _client.PostAsync("https://localhost:5021/api/regions", bodyContent);
             var postContent = await postResult.Content.ReadAsStringAsync();
             if (!postResult.IsSuccessStatusCode)
             {
@@ -35,9 +31,9 @@ namespace RealEstate.Client.HttpRepository
             }
         }
 
-        public async Task DeleteProperty(int id)
+        public async Task DeleteAsync(int id)
         {
-            var url = Path.Combine("https://localhost:5011/api/regions", id.ToString());
+            var url = Path.Combine("https://localhost:5021/api/regions", id.ToString());
 
             var deleteResult = await _client.DeleteAsync(url);
             var deleteContent = await deleteResult.Content.ReadAsStringAsync();
@@ -46,22 +42,16 @@ namespace RealEstate.Client.HttpRepository
                 throw new ApplicationException(deleteContent);
             }
         }
-        //public async Task<List<Region>> GetProperty()
-        //{
-        //    var response = await _client.GetAsync("https://localhost:5011/api/regions");
-        //    var content = await response.Content.ReadAsStringAsync();
-        //    var regions = JsonSerializer.Deserialize<List<Region>>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-        //    return regions;
-        //}
 
-        public async Task<PagingResponse<Region>> GetProperty(EntityParameters entityParameters)
+        //passing an entire URI to the server endpoint
+        public async Task<PagingResponse<Region>> GetAll(EntityParameters entityParameters)
         {
             var queryStringParam = new Dictionary<string, string>
             {
                 ["pageNumber"] = entityParameters.PageNumber.ToString()
             };
 
-            var response = await _client.GetAsync(QueryHelpers.AddQueryString("https://localhost:5011/api/regions", queryStringParam));
+            var response = await _client.GetAsync(QueryHelpers.AddQueryString("https://localhost:5021/api/regions", queryStringParam));
             var content = await response.Content.ReadAsStringAsync();
             if (!response.IsSuccessStatusCode)
             {
@@ -77,9 +67,9 @@ namespace RealEstate.Client.HttpRepository
             return pagingResponse;
         }
 
-        public async Task<Region> GetPropertyById(string id)
+        public async Task<Region> GetById(string id)
         {
-            var url = Path.Combine("https://localhost:5011/api/regions/", id);
+            var url = Path.Combine("https://localhost:5021/api/regions/", id);
 
             var response = await _client.GetAsync(url);
             var content = await response.Content.ReadAsStringAsync();
@@ -91,11 +81,12 @@ namespace RealEstate.Client.HttpRepository
             var region = JsonSerializer.Deserialize<Region>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
             return region;
         }
-        public async Task UpdateProperty(Region region)
+
+        public async Task UpdateAsync(Region entity)
         {
-            var content = JsonSerializer.Serialize(region);
+            var content = JsonSerializer.Serialize(entity);
             var bodyContent = new StringContent(content, Encoding.UTF8, "application/json");
-            var url = Path.Combine("https://localhost:5011/api/regions/", region.Id.ToString());
+            var url = Path.Combine("https://localhost:5021/api/regions/", entity.Id.ToString());
 
             var putResult = await _client.PutAsync(url, bodyContent);
             var putContent = await putResult.Content.ReadAsStringAsync();
@@ -103,6 +94,26 @@ namespace RealEstate.Client.HttpRepository
             if (!putResult.IsSuccessStatusCode)
             {
                 throw new ApplicationException(putContent);
+            }
+        }
+
+        /// <summary>
+        /// In case if such property will be added)
+        /// </summary>
+        /// <param name="wont be used probably"></param>
+        /// <returns>nothing</returns>
+        public async Task<string> UploadImage(MultipartFormDataContent content)
+        {
+            var postResult = await _client.PostAsync("https://localhost:5021/api/upload", content);
+            var postContent = await postResult.Content.ReadAsStringAsync();
+            if (!postResult.IsSuccessStatusCode)
+            {
+                throw new ApplicationException(postContent);
+            }
+            else
+            {
+                var imgUrl = Path.Combine("https://localhost:5021/", postContent);
+                return imgUrl;
             }
         }
     }

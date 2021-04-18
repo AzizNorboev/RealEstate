@@ -10,32 +10,33 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class RegionRepo : RepositoryBase, IRepositoryBase<Region>
+    public class RegionRepo : RepositoryBase, IRepository<Region>
     {
         public RegionRepo(RepoContext context)
             : base(context)
         {
         }
 
-        public async Task CreateAsync(Region entity)
+        public async Task Create(Region entity)
         {
             _context.Add(entity);
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task Update(Region entity, Region dbEntity)
+        {
+            dbEntity.Name = entity.Name;
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task Delete(int id)
         {
             var region = await _context.Regions.FindAsync(id);
             _context.Regions.Remove(region);
             await _context.SaveChangesAsync();
         }
 
-        //public async Task<IEnumerable<Region>> GetAllAsync()
-        //{
-        //    return await _context.Regions.ToListAsync();
-        //}
-
-        public async Task<PagedList<Region>> GetAllAsync(EntityParameters entityParameters)
+        public async Task<PagedList<Region>> GetAll(EntityParameters entityParameters)
         {
             var regions = await _context.Regions.ToListAsync();
 
@@ -43,18 +44,10 @@ namespace Repository
                 .ToPagedList(regions, entityParameters.PageNumber, entityParameters.PageSize);
         }
 
-
-        public async Task<Region> GetByIdAsync(int id)
+        public async Task<Region> GetById(int id)
         {
             return await _context.Regions
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(r => r.Id == id);
         }
-
-        public async Task UpdateAsync(Region entity, Region dbRegion)
-        {
-            dbRegion.Name = entity.Name;
-            await _context.SaveChangesAsync();
-        }
-
     }
 }

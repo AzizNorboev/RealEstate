@@ -22,6 +22,12 @@ namespace RealEstate.Client.Components.RegionTable
             var url = Path.Combine("/updateRegion/", id.ToString());
             NavigationManager.NavigateTo(url);
         }
+        private void RedirectToDetails(int id)
+        {
+            var url = Path.Combine("/regionDetails/", id.ToString());
+            NavigationManager.NavigateTo(url);
+        }
+
         [Parameter]
         public EventCallback<int> OnDeleted { get; set; }
 

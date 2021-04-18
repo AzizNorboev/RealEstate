@@ -1,43 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿
 using System.Threading.Tasks;
 using Entities.Features;
 using Entities.Models;
-using Microsoft.AspNetCore.Http;
+
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Repository;
 
 namespace RealEstate.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/houses")]
     [ApiController]
     public class HousesController : ControllerBase
     {
-        private readonly IRepositoryBase<House> _houseRepo;
+        private readonly IRepository<House> _houseRepo;
 
-        public HousesController(IRepositoryBase<House> houseRepo)
+        public HousesController(IRepository<House> houseRepo)
         {
             _houseRepo = houseRepo;
         }
-
-        //[HttpGet]
-        //public async Task<IActionResult> Get()
-        //{
-        //    var houses = await _houseRepo.GetAllAsync();
-        //    return Ok(houses); //TODO: Will use a simpler way of displaying data. Generics didnt work
-        //}
-
-        public async Task<IActionResult> Get([FromQuery] EntityParameters entityParameters)
+        [HttpGet]
+        public async Task<IActionResult> GetAll([FromQuery] EntityParameters entityParameters)
         {
-            var houses = await _houseRepo.GetAllAsync(entityParameters);
+            var houses = await _houseRepo.GetAll(entityParameters);
             Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(houses.MetaData));
             return Ok(houses);
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var house = await _houseRepo.GetById(id);
+            return Ok(house);
+        }
+
         [HttpPost]
-        public async Task<IActionResult> CreateAsync([FromBody] House house)
+        public async Task<IActionResult> Create([FromBody] House house)
         {
             if (house == null)
                 return BadRequest();
@@ -46,40 +44,33 @@ namespace RealEstate.Controllers
             {
                 return BadRequest("Invalid model object");
             }
-            await _houseRepo.CreateAsync(house);
+            await _houseRepo.Create(house);
 
             return Created("", house);
         }
-     
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetByIdAsync(int id)
-        {
-            var house = await _houseRepo.GetByIdAsync(id);
-            return Ok(house);
-        }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProduct(int id, [FromBody] House house)
+        public async Task<IActionResult> Update(int id, [FromBody] House house)
         {
-            
 
-            var dbHouse = await _houseRepo.GetByIdAsync(id);
+
+            var dbHouse = await _houseRepo.GetById(id);
             if (dbHouse == null)
                 return NotFound();
             if (!ModelState.IsValid)
             {
                 return BadRequest("Invalid model object");
             }
-            await _houseRepo.UpdateAsync(house, dbHouse);
+            await _houseRepo.Update(house, dbHouse);
 
             return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteAsync(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            
-            await _houseRepo.DeleteAsync(id);
+
+            await _houseRepo.Delete(id);
 
             return NoContent();
         }

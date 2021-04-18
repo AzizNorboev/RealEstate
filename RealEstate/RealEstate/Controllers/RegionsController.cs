@@ -11,32 +11,33 @@ using Repository;
 
 namespace RealEstate.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/regions")]
     [ApiController]
     public class RegionsController : ControllerBase
     {
-        private readonly IRepositoryBase<Region> _regionRepo;
+        private readonly IRepository<Region> _regionRepo;
 
-        public RegionsController(IRepositoryBase<Region> regionRepo)
+        public RegionsController(IRepository<Region> regionRepo)
         {
             _regionRepo = regionRepo;
         }
 
-        //public async Task<IActionResult> Get()
-        //{
-        //    var regions = await _regionRepo.GetAllAsync();
-        //    return Ok(regions);
-        //}
-
-        public async Task<IActionResult> Get([FromQuery] EntityParameters entityParameters)
+        public async Task<IActionResult> GetAll([FromQuery] EntityParameters entityParameters)
         {
-            var regions = await _regionRepo.GetAllAsync(entityParameters);
+            var regions = await _regionRepo.GetAll(entityParameters);
             Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(regions.MetaData));
             return Ok(regions);
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var region = await _regionRepo.GetById(id);
+            return Ok(region);
+        }
+
         [HttpPost]
-        public async Task<IActionResult> CreateAsync([FromBody] Region region)
+        public async Task<IActionResult> Create([FromBody] Region region)
         {
             if (region == null)
                 return BadRequest();
@@ -45,16 +46,9 @@ namespace RealEstate.Controllers
             {
                 return BadRequest("Invalid model object");
             }
-            await _regionRepo.CreateAsync(region);
+            await _regionRepo.Create(region);
 
             return Created("", region);
-        }
-
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetByIdAsync(int id)
-        {
-            var region = await _regionRepo.GetByIdAsync(id);
-            return Ok(region);
         }
 
         [HttpPut("{id}")]
@@ -62,24 +56,24 @@ namespace RealEstate.Controllers
         {
 
 
-            var dbRegion = await _regionRepo.GetByIdAsync(id);
+            var dbRegion = await _regionRepo.GetById(id);
             if (dbRegion == null)
                 return NotFound();
             if (!ModelState.IsValid)
             {
                 return BadRequest("Invalid model object");
             }
-            await _regionRepo.UpdateAsync(region, dbRegion);
+            await _regionRepo.Update(region, dbRegion);
 
             return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteAsync(int id)
+        public async Task<IActionResult> Delete(int id)
         {
 
 
-            await _regionRepo.DeleteAsync(id);
+            await _regionRepo.Delete(id);
 
             return NoContent();
         }

@@ -5,13 +5,14 @@
             <tr>
                 <th scope="col"></th>
                 <th scope="col">NoRooms</th>
-                
-                <th scope="col">Area</th>
+
+               
                 <th scope="col">Description</th>
                 <th scope="col">City</th>
                 <th scope="col">Status</th>
-                
+
                 <th scope="col">Price</th>
+                <th scope="col">Details</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
             </tr>
@@ -27,9 +28,7 @@
                     @house.NumOfRooms
                 </td>
 
-                <td class="align-middle">
-                    @house.Square m²
-                </td>
+              
                 <td class="align-middle">
                     @house.Description
                 </td>
@@ -44,7 +43,9 @@
                 <td class="align-middle">
                     $@house.Price
                 </td>
-
+                <td class="align-middle">
+                    <button type="button" class="btn btn-outline-primary" @onclick="() => RedirectToDetails(house.Id)">Details</button>
+                </td>
                 <td class="align-middle">
                     <button type="button" class="btn btn-info" @onclick="() => RedirectToUpdate(house.Id)">Update</button>
                 </td>

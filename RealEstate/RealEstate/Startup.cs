@@ -16,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using RealEstate.Extentions;
 using Repository;
 
 namespace RealEstate
@@ -29,33 +30,19 @@ namespace RealEstate
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        //to keep this method clean and readable
+        //there was created ServiceExtention class with configuration methods
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddCors(policy =>
-            {
-                policy.AddPolicy("CorsPolicy", options => options
-                    .AllowAnyOrigin()
-                    .AllowAnyHeader()
-                    .AllowAnyMethod()
-                    .WithExposedHeaders("X-Pagination"));
-            });
+            services.ConfigureCors();
+     
+            services.ConfigureDI();
 
-            services.AddScoped<IRepositoryBase<Apartment>, ApartmentRepo>();
-            services.AddScoped<IRepositoryBase<House>, HouseRepo>();
-            services.AddScoped<IRepositoryBase<Region>, RegionRepo>();
+            services.ConfigureSqlContext(Configuration);
 
+            services.AddNewTonSoftJson();
 
-            services.AddDbContext<RepoContext>(
-                options => options.UseSqlServer(
-                    Configuration.GetConnectionString("RealEstate")
-                    )
-                );
-            services.AddControllersWithViews()
-                     .AddNewtonsoftJson(options =>
-                       options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-                    );
             services.AddControllers();
         }
 
@@ -70,7 +57,12 @@ namespace RealEstate
             app.UseHttpsRedirection();
 
             app.UseCors("CorsPolicy");
-           
+            app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"StaticFiles")),
+                RequestPath = new PathString("/StaticFiles")
+            });
 
             app.UseRouting();
 

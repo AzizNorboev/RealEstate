@@ -6,6 +6,7 @@ namespace Entities.Features
 {
     public class MetaData
     {
+        //required properties for the pagination
         public int CurrentPage { get; set; }
         public int TotalPages { get; set; }
         public int PageSize { get; set; }

@@ -1,0 +1,50 @@
+﻿@page "/houseDetails/{id}"
+
+<h2>Details</h2>
+
+@if (_house != null)
+{
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Picture</th>
+                <th scope="col">Id</th>
+                <th scope="col">NoRooms</th>
+                <th scope="col">Area</th>
+                <th scope="col">Description</th>
+                <th scope="col">Status</th>
+                <th scope="col">Price</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>
+                    <img src="@_house.ImageURL" alt="apartment image" style="width:150px;" />
+                </td>
+                <td class="align-middle">
+                    @_house.Id
+                </td>
+                <td class="align-middle">
+                    @_house.NumOfRooms
+                </td>
+                <td class="align-middle">
+                    @_house.Square m²
+                </td>
+                <td class="align-middle">
+                    @_house.Description
+                </td>
+                <td class="align-middle">
+                    @_house.Status
+                </td>
+                <td class="align-middle">
+                    $@_house.Price
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+}

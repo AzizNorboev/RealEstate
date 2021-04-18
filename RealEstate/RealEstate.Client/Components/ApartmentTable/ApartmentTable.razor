@@ -6,12 +6,13 @@
             <tr>
                 <th scope="col"></th>
                 <th scope="col">NoRooms</th>
-                <th scope="col">FloorNo</th>
-                <th scope="col">Area</th>
+               
+     
                 <th scope="col">Description</th>
                 <th scope="col">Status</th>
                 <th scope="col">City</th>
                 <th scope="col">Price</th>
+                <th scope="col">Details</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
             </tr>
@@ -26,19 +27,15 @@
                 <td class="align-middle">
                     @apartment.NumOfRooms
                 </td>
-                <td class="align-middle">
-                    @apartment.FloorNo
-                </td>
-                <td class="align-middle">
-                    @apartment.Square m²
-                </td>
+            
+
                 <td class="align-middle">
                     @apartment.Description
                 </td>
                 <td class="align-middle">
                     @apartment.Status
                 </td>
-                @*couldnt display name: @apartment.region.name doesnt work *@
+
                 <td class="align-middle">
                     @apartment.Region.Name
                 </td>
@@ -46,7 +43,9 @@
                 <td class="align-middle">
                     $@apartment.Price
                 </td>
-
+                <td class="align-middle">
+                    <button type="button" class="btn btn-outline-primary" @onclick="() => RedirectToDetails(apartment.Id)">Details</button>
+                </td>
                 <td class="align-middle">
                     <button type="button" class="btn btn-info" @onclick="() => RedirectToUpdate(apartment.Id)">Update</button>
                 </td>

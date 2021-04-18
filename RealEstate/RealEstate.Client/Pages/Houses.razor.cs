@@ -15,23 +15,23 @@ namespace RealEstate.Client.Pages
         public MetaData MetaData { get; set; } = new MetaData();
         private EntityParameters _houseParameters = new EntityParameters();
 
-        [Inject]
-        public IPropertyHttpRepository<House> HouseRepo { get; set; }
+        [Inject]//we are injectiong the interface to call the GetAll method
+        public IHttpRepository<House> HouseRepo { get; set; }
 
         protected async override Task OnInitializedAsync()
         {
-            await GetProperty();
-           
+           await GetAll();
+
         }
 
         private async Task SelectedPage(int page)
         {
             _houseParameters.PageNumber = page;
-            await GetProperty();
+            await GetAll();
         }
-        private async Task GetProperty()
+        private async Task GetAll()
         {
-            var pagingResponse = await HouseRepo.GetProperty(_houseParameters);
+            var pagingResponse = await HouseRepo.GetAll(_houseParameters);
             HouseList = pagingResponse.Items;
             MetaData = pagingResponse.MetaData;
         }
@@ -41,21 +41,21 @@ namespace RealEstate.Client.Pages
             Console.WriteLine(searchTerm);
             _houseParameters.PageNumber = 1;
             _houseParameters.SearchTerm = searchTerm;
-            await GetProperty();
+            await GetAll();
         }
 
         private async Task SortChanged(string orderBy)
         {
             Console.WriteLine(orderBy);
             _houseParameters.OrderBy = orderBy;
-            await GetProperty();
+            await GetAll();
         }
 
         private async Task DeleteHouse(int id)
         {
-            await HouseRepo.DeleteProperty(id);
+            await HouseRepo.DeleteAsync(id);
             _houseParameters.PageNumber = 1;
-            await GetProperty();
+            await GetAll();
         }
     }
 }

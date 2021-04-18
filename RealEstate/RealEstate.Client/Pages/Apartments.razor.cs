@@ -15,22 +15,23 @@ namespace RealEstate.Client.Pages
         public MetaData MetaData { get; set; } = new MetaData();
         private EntityParameters _apartmentParameters = new EntityParameters();
 
-        [Inject]
-        public IPropertyHttpRepository<Apartment> ApartmentRepo { get; set; }
+        [Inject]//we are injectiong the interface to call the GetAll method
+        public IHttpRepository<Apartment> ApartmentRepo { get; set; }
 
         protected async override Task OnInitializedAsync()
         {
-            await GetProperty();
+            await GetAll();
+
         }
 
         private async Task SelectedPage(int page)
         {
             _apartmentParameters.PageNumber = page;
-            await GetProperty();
+            await GetAll();
         }
-        private async Task GetProperty()
+        private async Task GetAll()
         {
-            var pagingResponse = await ApartmentRepo.GetProperty(_apartmentParameters);
+            var pagingResponse = await ApartmentRepo.GetAll(_apartmentParameters);
             ApartmentList = pagingResponse.Items;
             MetaData = pagingResponse.MetaData;
         }
@@ -40,21 +41,21 @@ namespace RealEstate.Client.Pages
             Console.WriteLine(searchTerm);
             _apartmentParameters.PageNumber = 1;
             _apartmentParameters.SearchTerm = searchTerm;
-            await GetProperty();
+            await GetAll();
         }
 
         private async Task SortChanged(string orderBy)
         {
             Console.WriteLine(orderBy);
             _apartmentParameters.OrderBy = orderBy;
-            await GetProperty();
+            await GetAll();
         }
 
         private async Task DeleteApartment(int id)
         {
-            await ApartmentRepo.DeleteProperty(id);
+            await ApartmentRepo.DeleteAsync(id);
             _apartmentParameters.PageNumber = 1;
-            await GetProperty();
+            await GetAll();
         }
     }
 }

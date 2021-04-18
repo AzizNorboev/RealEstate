@@ -1,4 +1,5 @@
 ﻿@page "/createHouse"
+@inherits Regions
 
 <h2>Create House Form</h2>
 
@@ -18,7 +19,7 @@
     <div class="form-group row">
         <label for="imageurl" class="col-md-2 col-form-label">Image:</label>
         <div class="col-md-10">
-            <InputText id="imageurl" class="form-control" @bind-Value="_house.ImageURL" />
+            <HouseImageUpload OnChange="AssignImageUrl" />
         </div>
     </div>
 
@@ -39,9 +40,17 @@
     </div>
 
     <div class="form-group row">
-        <label for="regionid" class="col-md-2 col-form-label">RegionId:</label>
+        <label for="regionid" class="col-md-2 col-form-label">Region:</label>
         <div class="col-md-10">
-            <InputNumber id="regionid" class="form-control" @bind-Value="_house.RegionId" />
+            @if (RegionList != null)
+        {
+            <select @bind="_house.RegionId" class="form-control" >
+                @foreach (var item in RegionList)
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+            </select>
+        }
         </div>
     </div>
 

@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
+
 
 namespace Entities.Models
 {
     public class House
     {
-        
+
         public int Id { get; set; }
 
-        [Required (ErrorMessage = "Price is required")]
+        [Required(ErrorMessage = "Price is required")]
         public double Price { get; set; }
 
         [Required]
@@ -41,3 +38,4 @@ namespace Entities.Models
         ForRent
     }
 }
+

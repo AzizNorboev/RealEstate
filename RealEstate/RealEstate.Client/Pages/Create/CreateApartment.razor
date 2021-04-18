@@ -1,4 +1,5 @@
 ﻿@page "/createApartment"
+@inherits Regions
 
 <h2>Create Apartment Form</h2>
 
@@ -18,14 +19,14 @@
         <label for="floorno" class="col-md-2 col-form-label">Floor Number:</label>
         <div class="col-md-10">
             <InputNumber id="floorno" class="form-control" @bind-Value="_apartment.FloorNo" />
-            <ValidationMessage For="@(() => _apartment.FloorNo)" /> 
+            <ValidationMessage For="@(() => _apartment.FloorNo)" />
         </div>
     </div>
 
     <div class="form-group row">
         <label for="imageurl" class="col-md-2 col-form-label">Image:</label>
         <div class="col-md-10">
-            <InputText id="imageurl" class="form-control" @bind-Value="_apartment.ImageURL" />
+            <ApartmentImageUpload OnChange="AssignImageUrl" />
 
         </div>
     </div>
@@ -47,9 +48,17 @@
     </div>
 
     <div class="form-group row">
-        <label for="regionid" class="col-md-2 col-form-label">RegionId:</label>
+        <label for="regionid" class="col-md-2 col-form-label">Region:</label>
         <div class="col-md-10">
-            <InputNumber id="regionid" class="form-control" @bind-Value="_apartment.RegionId" />
+            @if (RegionList != null)
+            {
+                <select @bind="_apartment.RegionId" class="form-control">
+                    @foreach (var item in RegionList)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+            }
         </div>
     </div>
 

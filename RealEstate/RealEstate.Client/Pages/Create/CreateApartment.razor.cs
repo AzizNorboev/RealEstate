@@ -12,17 +12,18 @@ namespace RealEstate.Client.Pages.Create
     public partial class CreateApartment
     {
         private readonly Apartment _apartment = new Apartment();
-        //private readonly Region _region = new Region();
+
         private SuccessNotification _notification;
 
         [Inject]
-        public IPropertyHttpRepository<Apartment> ApartmentRepo { get; set; }
+        public IHttpRepository<Apartment> ApartmentRepo { get; set; }
         //TODO: Region should be chosen not inserted by user
         private async Task Create()
         {
             await ApartmentRepo.CreateAsync(_apartment);
             _notification.Show();
         }
-       
+        private void AssignImageUrl(string imgUrl) => _apartment.ImageURL = imgUrl;
+
     }
 }
