@@ -64,7 +64,6 @@ obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Options.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Caching.Memory.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Logging.dll
 obj\Debug\netstandard2.1\blazor\unlinked\System.Collections.Immutable.dll
-obj\Debug\netstandard2.1\blazor\unlinked\Tewr.Blazor.FileReader.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.AspNetCore.Components.WebAssembly.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Configuration.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Configuration.Json.dll
@@ -73,6 +72,7 @@ obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.FileProviders.Phys
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.FileSystemGlobbing.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.FileProviders.Abstractions.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.JSInterop.WebAssembly.dll
+obj\Debug\netstandard2.1\blazor\unlinked\Tewr.Blazor.FileReader.dll
 obj\Debug\netstandard2.1\blazor\unlinked\RealEstate.Client.pdb
 obj\Debug\netstandard2.1\blazor\unlinked\Entities.pdb
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Data.SqlClient.pdb

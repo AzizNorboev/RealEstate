@@ -1,4 +1,4 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/" Path="C:\Users\Admin\Documents\GitHub\WADCW\RealEstate\RealEstate.Client\bin\Debug\netstandard2.1\wwwroot\" />
-  <ContentRoot BasePath="_content/Tewr.Blazor.FileReader" Path="C:\Users\Admin\.nuget\packages\tewr.blazor.filereader\3.0.0.20340\build\..\staticwebassets\" />
+  <ContentRoot BasePath="/" Path="D:\Documents\GitHub\RealEstate\RealEstate\RealEstate.Client\bin\Debug\netstandard2.1\wwwroot\" />
+  <ContentRoot BasePath="_content/Tewr.Blazor.FileReader" Path="C:\Users\Aziz_Norboev\.nuget\packages\tewr.blazor.filereader\3.0.0.20340\build\..\staticwebassets\" />
 </StaticWebAssets>

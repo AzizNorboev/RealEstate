@@ -89,7 +89,7 @@
       "url": "sample-data\/weather.json"
     },
     {
-      "hash": "sha256-YuEqp9vA0rEQdiuj9Gy9fc+LEX3JUazu1pjcNm8FcS4=",
+      "hash": "sha256-T1BmPWbu5DF\/W3cmUTyenQCu\/2g5OgeGorKM8rbTh4I=",
       "url": "_framework\/_bin\/RealEstate.Client.dll"
     },
     {
@@ -253,7 +253,7 @@
       "url": "_framework\/_bin\/Microsoft.JSInterop.dll"
     },
     {
-      "hash": "sha256-xbkGGzCLKvl3LRliSe6F9LuHQ\/eheKxwUCRE1EjCwHY=",
+      "hash": "sha256-AC8aMv60\/Jc2lFYSDSHVCFHr0vtPIztIGNTe\/6mav9I=",
       "url": "_framework\/_bin\/Entities.dll"
     },
     {
@@ -353,10 +353,6 @@
       "url": "_framework\/_bin\/System.Collections.Immutable.dll"
     },
     {
-      "hash": "sha256-llKLg+tAgZP0yy3uVXMJqnfqc1QzLzBaYbMDdWCwkng=",
-      "url": "_framework\/_bin\/Tewr.Blazor.FileReader.dll"
-    },
-    {
       "hash": "sha256-FJ+rEgcx6ljTxwbRXZSUGfrDKpVvOxHCSfNxbnXNn3M=",
       "url": "_framework\/_bin\/Microsoft.AspNetCore.Components.WebAssembly.dll"
     },
@@ -389,11 +385,15 @@
       "url": "_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-exLo0VxTC8JtLHfPFhQ3ICsg5AJCakNUkJdP1QtP8G8=",
+      "hash": "sha256-llKLg+tAgZP0yy3uVXMJqnfqc1QzLzBaYbMDdWCwkng=",
+      "url": "_framework\/_bin\/Tewr.Blazor.FileReader.dll"
+    },
+    {
+      "hash": "sha256-tznJcqr3GWejESmAdXJ7SuJc8ZygnoUbtcaYWI0AnKk=",
       "url": "_framework\/_bin\/RealEstate.Client.pdb"
     },
     {
-      "hash": "sha256-LjD5LhdNTlCP7Oc0heBbZgQMiFmXQvxMmQloi2Wjztc=",
+      "hash": "sha256-S8ej+QtORYNmK3b1Grxt1M9tojm6mUGq5gXzlNb4T4w=",
       "url": "_framework\/_bin\/Entities.pdb"
     },
     {
@@ -417,9 +417,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-BAVTkKkwBHcTK0TNVoDeW52GmBOP6tSwz9awcA6V+jw=",
+      "hash": "sha256-asOFDSVa1oMy3OywcTeP7AJcI5mSfkz2+5sy8kZbOog=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "7oUUrATQ"
+  "version": "YxuQhvMP"
 };
